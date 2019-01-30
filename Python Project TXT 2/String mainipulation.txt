@@ -1,0 +1,4 @@
+fizz = "Hello world!"
+
+for i in range(len(fizz)):
+    print(fizz[i])

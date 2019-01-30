@@ -1,0 +1,10 @@
+radius = float(input("Enter the value of radius of the sphere : "))
+
+pi: float = 3.14159
+
+area = 4 * pi * radius * radius
+
+volume = 4 / 3 * (pi * radius * radius * radius)
+
+print(area, "is the surface area of the sphere.")
+print(volume, "is the volume of the sphere.")

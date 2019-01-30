@@ -1,0 +1,22 @@
+import matplotlib.pyplot as plt
+from matplotlib import style
+
+style.use("dark_background")
+
+x1 = ("8100k", "9600k", "9700k", "9980xe")
+x2 = ("2200g", "2600x", "2700x", "3980x")
+y1 = (250, 300, 400, 2000)
+y2 = (240, 290, 350, 500)
+
+plt.plot(x1, y1, color="c", linewidth=2, label="INTEL CPU's")
+plt.plot(x2, y2, color="g", linewidth=2, label="AMD CPU's")
+
+plt.legend()
+
+plt.title("PRICE OF INTEL AND AMD PROCESSORS")
+plt.xlabel("PROCESSORS")
+plt.ylabel("PRICE ( IN $ )")
+
+plt.grid(True, color='#5C5C5C')
+
+plt.show()

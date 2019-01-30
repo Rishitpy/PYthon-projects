@@ -1,0 +1,14 @@
+end: int = 50
+
+for one in range(0, end):
+    one += 1
+    if one % 3 == 0 and one % 5 == 0:
+        print("Fizzbuzz")
+        continue
+    elif one % 3 == 0:
+        print("Fizz")
+        continue
+    elif one % 5 == 0:
+        print("Buzz")
+        continue
+    print(one)

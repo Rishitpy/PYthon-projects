@@ -1,0 +1,18 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+browser = webdriver.Chrome('D:\\WebDrivers\\chromedriver')
+
+browser.get("http://www.seleniumhq.org/")
+time.sleep(3)
+
+download = browser.find_element_by_link_text('Download')
+download.click()
+time.sleep(2)
+
+search_bar = browser.find_element_by_id('q')
+search_bar.send_keys('Download')
+time.sleep(2)
+
+search_bar.send_keys(Keys.ENTER)

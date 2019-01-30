@@ -1,0 +1,12 @@
+print("Sign in")
+
+email = input("Enter your email address: ")
+
+def emailReader(mail):
+    if mail.endswith('@gmail.com') == True or mail.endswith('@yahoo.com') == True:
+        print('Sign In Successful.')
+    else:
+        print('You entered an invalid email address')
+
+
+emailReader(email)

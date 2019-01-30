@@ -1,0 +1,11 @@
+def first(func):
+    print("This is the print from first function")
+    return func
+
+
+@first
+def second():
+    print("This is the print from second function")
+
+
+print(second())

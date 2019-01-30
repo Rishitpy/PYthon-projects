@@ -1,0 +1,32 @@
+def open_file(filename, mode, data):
+    if filename != "" and mode != "":
+        if mode == "r":
+            with open(filename, mode) as f:
+                print_data = f.read()
+                print(print_data)
+        elif mode == "w":
+            with open(filename, mode) as f:
+                f.write(data)
+        elif mode == "a":
+            with open(filename, mode) as f:
+                f.write(data)
+
+
+file = input("Enter the filename: ")
+mod = input("Enter the mode for opening the file: ")
+
+try:
+    if mod == "r":
+        null = ""
+        open_file(file, mod, null)
+    elif mod == "w":
+        dat = input("Enter the data: ")
+        open_file(file, mod, dat)
+    elif mod == "a":
+        dat = input("Enter the data: ")
+        open_file(file, mod, dat)
+    else:
+        print("--------------------------------------------------\nGiven mode is not there in the project.")
+        pass
+except FileNotFoundError:
+    print("------------------------------------------------------\nThis file is not in the project.")

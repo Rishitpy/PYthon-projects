@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+from matplotlib import style
+
+style.use("dark_background")
+
+x = ("i5 7400", "i5 7500", "i5 7600", "i5 7600k", "i7 7700k", "i7 7800x", "i7 6950x", "i9 7900x", "i9 7920x", "i9 7940x", "i9 7960x", "i9 7980xe")
+y = (7336, 8025, 8772, 9126, 12040, 14584, 19953, 21867, 23219, 25404, 25595, 27869)
+
+plt.barh(x, y, color="g", height=0.2)
+
+plt.title("INTEL 7th GEN DESKTOP CPU BENCHMARK")
+plt.xlabel("Score")
+plt.ylabel("Processor")
+
+plt.show()

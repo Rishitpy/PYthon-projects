@@ -1,0 +1,27 @@
+import csv
+
+print("Welcome to Google's assistant interview")
+
+print("Please enter your name")
+name = str(input(">> "))
+
+print("Please enter your age")
+age = int(input(">> "))
+if age >= 16:
+    pass
+else:
+    print("Not valid for interview")
+    quit()
+
+print("Please enter your programming language for which you have come\nIf you are here for more than one languages"
+      ", separate them by a slash(/)")
+lang = str(input(">> "))
+
+csv_data = [name, age, lang]
+
+with open("Data.csv", "a") as data:
+    writer = csv.writer(data)
+    writer.writerow(csv_data)
+
+
+print("Data sent successfully")

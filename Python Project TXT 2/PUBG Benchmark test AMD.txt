@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+from matplotlib import style
+
+style.use("dark_background")
+
+gpu = ("Vega 64", "Vega 56", "Rx 580", "Rx 570", "Rx 560", "Rx 480", "R9 fury", "R9 390x")
+fps = (98, 82, 69, 56, 31, 58, 56, 49)
+
+plt.barh(gpu, fps, color="r", height=0.2)
+
+plt.title("Average fps in Playerunknown's battlegrounds (higher is better)")
+plt.xlabel("GRAPHICS CARD")
+plt.ylabel("AVERAGE FPS")
+
+plt.show()

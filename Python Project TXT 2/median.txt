@@ -1,0 +1,10 @@
+first = int(input("Enter the first number : "))
+second = int(input("Enter the second number : "))
+third = int(input("Enter the third number : "))
+
+if first > second and first < third or first > third and first < second:
+    print(first, "is the median.")
+elif second > first and second < third or second > third and second < first:
+    print(second, "is the median.")
+elif third > first and third < second or third > second and third < first:
+    print(third, "is the median")

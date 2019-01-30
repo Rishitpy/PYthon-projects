@@ -1,0 +1,18 @@
+def read_file(file_name):
+    with open(file_name, "r") as file:
+        data = file.read()
+        print(data)
+
+def write_file(file_name):
+    data = input("Enter the data you want to write in the file (not append): ")
+    with open(file_name, "w") as file:
+        file.write(data)
+
+def append_file(file_name):
+    data = input("Enter the data you want to append in the file: ")
+    with open(file_name, "a") as file:
+        file.write(data)
+
+
+func = input("Enter the function you want to execute with the proper arguements: ")
+exec(func)

@@ -1,0 +1,37 @@
+from tkinter import *
+import tkinter as tk
+
+# Creating a window
+root = Tk()
+root.geometry('400x400')
+
+# # Adding a menu
+# mb = Menubutton(root, text="This is a menu")
+# mb.menu = Menu(mb)
+# mb["menu"] = mb.menu
+# mb.menu.add_command(label="Option 1", command=lambda: print("This is option one"))
+# mb.menu.add_command(label="Option 2", command=lambda: print("This is option two"))
+# mb.pack()
+#
+#
+# # Making a function for the button
+# def show():
+#     print("This is a command given by the button.")
+#
+#
+# # Creating a button
+# but = Button(root, text="Click Me", command=show())
+# but.pack(side=TOP)
+
+# Creating a integer variable
+v = tk.IntVar()
+
+# Creating a radio button
+radiobutton1 = Radiobutton(root, variable=v, value=0, text="It is sunny", command=lambda: print(v.get()))
+radiobutton2 = Radiobutton(root, variable=v, value=1, text="It is rainy", command=lambda: print(v.get()))
+
+radiobutton1.pack()
+radiobutton2.pack()
+
+# Making a loop to see the window
+root.mainloop()

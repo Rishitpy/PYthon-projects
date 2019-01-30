@@ -1,0 +1,31 @@
+from random import choice
+from builtins import input
+import goto
+
+name = str(input("Enter your name : "))
+print("Hi {} . Now we are starting our rock paper scissors game.".format(name))
+
+option = choice(['Rock', 'Scissors', 'Paper'])
+player_choice = str(input("Enter your choice (first letter capital and no plural) : "))
+
+
+if option == "Rock" and player_choice == "Scissor":
+    print("I won as I chose {} and you chose {} .".format(option, player_choice))
+elif option == "Scissor" and player_choice == "Paper":
+    print("I won as I chose {} and you chose {} .".format(option, player_choice))
+elif option == "Paper" and player_choice == "Rock":
+    print("I won as I chose {} and you chose {} .".format(option, player_choice))
+elif option == "Rock" and player_choice == "Paper":
+    print("You won as You chose {} and I chose {} .".format(player_choice, option))
+elif option == "Scissor" and player_choice == "Rock":
+    print("You won as You chose {} and I chose {} .".format(player_choice, option))
+elif option == "Paper" and player_choice == "Scissor":
+    print("You won as You chose {} and I chose {} .".format(player_choice, option))
+elif option == "Scissor" and player_choice == "Scissor":
+    print("Draw :  You chose {} and I chose {} .".format(player_choice, option))
+elif option == "Rock" and player_choice == "Rock":
+    print("Draw :  You chose {} and I chose {} .".format(player_choice, option))
+elif option == "Paper" and player_choice == "Paper":
+    print("Draw :  You chose {} and I chose {} .".format(player_choice, option))
+
+

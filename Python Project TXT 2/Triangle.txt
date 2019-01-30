@@ -1,0 +1,10 @@
+one = int(input("Enter the first side of the triangle : "))
+two = int(input("Enter the second side of the triangle : "))
+three = int(input("Enter the third side of the triangle : "))
+
+if one == two == three:
+    print("This is an equilateral triangle.")
+elif one != two == three or one == two != three:
+    print("This is an isosceles triangle.")
+elif one != two != three:
+    print("This is a scalene triangle.")

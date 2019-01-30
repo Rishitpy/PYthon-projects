@@ -1,0 +1,6 @@
+with open('Something.txt', 'w') as f:
+    #     print(f.read())
+    materials = '.!@#$%^&*()_+|-=[[`~}{;\'.,?><'
+    if materials in f:
+        f.append(materials)
+        print(f.read())

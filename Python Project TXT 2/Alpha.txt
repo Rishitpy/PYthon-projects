@@ -1,0 +1,10 @@
+alpha = str(input("Enter a vowel or consonant : "))
+
+vowels = ("a", "e", "i", "o", "u")
+consonants = ("b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z")
+
+if alpha in vowels:
+    print("Your input is a vowel.")
+elif alpha in consonants:
+    print("Your input is consonant.")
+

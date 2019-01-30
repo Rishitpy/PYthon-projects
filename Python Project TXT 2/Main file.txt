@@ -1,0 +1,181 @@
+import pygame
+import time
+import random
+
+pygame.init()
+win = pygame.display.set_mode((700, 830))
+player = pygame.image.load("Player.png")
+new_player = pygame.transform.scale(player, (90, 150))
+raw_blast = pygame.image.load("Blast.png")
+blast = pygame.transform.scale(raw_blast, (150, 150))
+ending = pygame.image.load("Ending.png")
+bg = pygame.image.load("Bg for new game.jpg")
+new_bg = pygame.transform.scale(bg, (700, 1376))
+win.blit(new_bg, (0, 0))
+clock = pygame.time.Clock()
+
+
+class Player(object):
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.vel = 10
+        self.health = 30
+        self.visible = True
+        self.won = False
+
+    def move(self, window):
+        if self.visible:
+            window.blit(new_player, (self.x, self.y))
+            # pygame.draw.rect(window, (255, 0, 0), (self.x, self.y - 10, 90, 10))
+            # pygame.draw.rect(window, (0, 255, 0), (self.x, self.y - 10, self.health * 3, 10))
+            if self.x < 153 or self.x + 90 > 540:
+                self.vel = 5
+        if enemy.x_cordinate + enemy.width >= self.x >= enemy.x_cordinate and enemy.y + enemy.height >= self.y >= enemy.y:
+            if enemy.x_cordinate + enemy.width >= self.x + 90 >= enemy.x_cordinate and enemy.y + enemy.height >= self.y + 150 >= enemy.y:
+                self.hit()
+                enemy.visible = False
+        if new_enemy.x_cordinate + new_enemy.width >= self.x >= new_enemy.x_cordinate and new_enemy.y + new_enemy.height >= self.y >= new_enemy.y:
+            if new_enemy.x_cordinate + new_enemy.width >= self.x + 90 >= new_enemy.x_cordinate and new_enemy.y + new_enemy.height >= self.y + 150 >= new_enemy.y:
+                self.hit()
+                new_enemy.visible = False
+        pygame.display.update()
+
+    def hit(self):
+        if self.health < 30 and self.health > 0:
+            self.health -= 1
+        elif self.health <= 0:
+            win.blit(blast, (self.x - 30, self.y))
+
+
+class Enemies(object):
+
+    def __init__(self, y, height, width):
+        self.y = y
+        self.height = height
+        self.width = width
+        self.x_cordinate = random.randint(173, 460)
+        self.vel = 5
+        self.down = True
+        self.up = False
+        self.visible = True
+        self.random_enemies = random.choice(("Car_2.png", "Car_3.png", "Car_4.png", "Car_5.png", "Car_6.png"))
+        self.raw_enemies = pygame.image.load(self.random_enemies)
+        self.enemies = pygame.transform.scale(self.raw_enemies, (self.height, self.width))
+
+    def move(self, window):
+        if self.visible:
+            if new_enemy.x_cordinate + new_enemy.width > self.x_cordinate + self.width > new_enemy.x_cordinate or new_enemy.x_cordinate + new_enemy.width > self.x_cordinate + self.width > new_enemy.x_cordinate and self.y < -120:
+                self.x_cordinate = random.randint(173, 460)
+            else:
+                window.blit(self.enemies, (self.x_cordinate, self.y))
+            if self.down:
+                self.y += self.vel
+            if self.up:
+                self.y -= self.vel
+            if self.y >= 0:
+                self.draw()
+        pygame.display.update()
+
+    def draw(self):
+        if self.visible:
+            if self.y >= 830:
+                self.y -= 1600
+                self.x_cordinate = random.randint(173, 460)
+                self.random_enemies = random.choice(("Car_2.png", "Car_3.png", "Car_4.png", "Car_5.png", "Car_6.png"))
+                self.raw_enemies = pygame.image.load(self.random_enemies)
+                self.enemies = pygame.transform.scale(self.raw_enemies, (self.height, self.width))
+
+
+
+class OtherEnemies(object):
+
+    def __init__(self, y, height, width):
+        self.y = y
+        self.height = height
+        self.width = width
+        self.x_cordinate = random.randint(173, 460)
+        self.vel = 5
+        self.down = True
+        self.up = False
+        self.visible = True
+        self.random_enemies = random.choice(("Car_2.png", "Car_3.png", "Car_4.png", "Car_5.png", "Car_6.png"))
+        self.raw_enemies = pygame.image.load(self.random_enemies)
+        self.enemies = pygame.transform.scale(self.raw_enemies, (self.height, self.width))
+
+    def move(self, window):
+        if self.visible:
+            if enemy.x_cordinate + enemy.width > self.x_cordinate + self.width > enemy.x_cordinate or enemy.x_cordinate + enemy.width > self.x_cordinate + self.width > enemy.x_cordinate  and self.y < -120:
+                self.x_cordinate = random.randint(173, 460)
+            window.blit(self.enemies, (self.x_cordinate, self.y))
+            if self.down:
+                self.y += self.vel
+            if self.up:
+                self.y -= self.vel
+            if self.y >= 0:
+                self.draw()
+        pygame.display.update()
+
+    def draw(self):
+        if self.visible:
+            if self.y >= 830:
+                self.y -= 1000
+                self.x_cordinate = random.randint(173, 460)
+                self.random_enemies = random.choice(("Car_2.png", "Car_3.png", "Car_4.png", "Car_5.png", "Car_6.png"))
+                self.raw_enemies = pygame.image.load(self.random_enemies)
+                self.enemies = pygame.transform.scale(self.raw_enemies, (self.height, self.width))
+
+
+def redraw():
+    win.blit(new_bg, (0, 0))
+    man.move(win)
+    enemy.move(win)
+    new_enemy.move(win)
+    if not man.visible:
+        lost_text = losing.render("YOU LOST", 10, (255, 0, 0))
+        win.blit(lost_text, (0, 250))
+
+
+run = True
+winning = pygame.font.SysFont("DigifaceWide", 250, False, False)
+losing = pygame.font.SysFont("Chiller", 250, False, False)
+man = Player(290, 660)
+enemy = Enemies(-150, 70, 120)
+new_enemy = OtherEnemies(-150, 70, 120)
+
+
+while run:
+    clock.tick(27)
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
+
+    if man.x >= 610:
+        man.x -= 10
+    if man.x <= 0:
+        man.x += 10
+    if man.y >= 680:
+        man.y -= 10
+    if man.y <= 0:
+        man.y += 10
+    else:
+        man.vel = 10
+
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_UP]:
+        man.y -= man.vel
+    if keys[pygame.K_DOWN]:
+        man.y += man.vel
+    if keys[pygame.K_LEFT]:
+        man.x -= man.vel
+    if keys[pygame.K_RIGHT]:
+        man.x += man.vel
+
+    if not man.won:
+        win.blit(ending, (250, 153))
+
+    redraw()
+
+pygame.quit()

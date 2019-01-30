@@ -1,0 +1,33 @@
+from tkinter import *
+# from tkinter import messagebox
+# import csv
+# from PIL import Image, ImageTk
+
+# Making a Tkinter window
+win = Tk()
+win.title("PYTHON GUI")
+win.geometry("700x700")
+
+
+# Commands
+def click_me():
+    action.configure(text="Hello " + name.get())
+
+
+# Labels
+alabel = Label(win, text="ENTER YOUR NAME")
+
+# Buttons
+action = Button(win, text="CLICK ME", command=click_me)
+
+# Entries
+name = StringVar()
+nameEntered = Entry(win, width=12, textvariable=name)
+
+# Packing the widgets
+nameEntered.place(x=50, y=50)
+alabel.place(x=100, y=100)
+action.place(x=150, y=150)
+
+# Mainloop
+win.mainloop()

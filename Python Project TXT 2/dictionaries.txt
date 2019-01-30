@@ -1,0 +1,12 @@
+import pprint
+
+sentence = "Hello everyone! I am Rishit and today I am gonna tell you something about dictionaries in Python."
+char_count = {}
+
+for characters in sentence:
+    char_count.setdefault(characters, 0)
+    char_count[characters] += 1
+
+# print(char_count)
+# print("-" * 210)
+pprint.pprint(char_count)

@@ -1,0 +1,12 @@
+import docx
+
+doc = docx.Document('something.docx')
+
+para1 = doc.paragraphs[0].text
+print(para1)
+
+para2 = doc.paragraphs[1].text
+print(para2)
+
+para3 = doc.paragraphs[2].text
+print(para3)

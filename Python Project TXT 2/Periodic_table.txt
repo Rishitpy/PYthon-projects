@@ -1,0 +1,250 @@
+def main():
+
+    symbol = str(input("Enter the symbol of the element : ")).lower()
+
+    if symbol == "h":
+        print("Atomic No. : 1\nName : Hydrogen\nAtomic Mass : 1.00794\nCategory : Non Metal\n1st Ionization Energy : 1312.0\nElectronegativity : 2.20")
+    elif symbol == "b":
+        print("Atomic No. : 5\nName : Boron\nAtomic Mass : 10.811\nCategory : Metalloid\n1st Ionization Energy : 800.6\nElecronegativity : 2.04")
+    elif symbol == "he":
+        print("Atomic No. : 2\nName : Helium\nAtomic Mass : 4.002602\nCategory : Noble Gas\n1st Ionization Energy : 2372.3\nElecronegativity : Nil")
+    elif symbol == "li":
+        print("Atomic No. : 3\nName : Lithium\nAtomic Mass : 6.941\nCategory : Alkali Metal\n1st Ionization Energy : 520.2\nElecronegativity : 0.96")
+    elif symbol == "be":
+        print("Atomic No. : 4\nName : Beryllium\nAtomic Mass : 9.012182\nCategory : Alkaline Metal\n1st Ionization Energy : 899.5\nElecronegativity : 1.57")
+    elif symbol == "c":
+        print("Atomic No. : 6\nName : Carbon\nAtomic Mass : 12.0107\nCategory : Non Metal\n1st Ionization Energy : 1086.5\nElecronegativity : 2.55")
+    elif symbol == "n":
+        print("Atomic No. : 7\nName : Nitrogen\nAtomic Mass : 14.0067\nCategory : Non Metal\n1st Ionization Energy : 1402.3\nElecronegativity : 3.04")
+    elif symbol == "o":
+        print("Atomic No. : 8\nName : Oxygen\nAtomic Mass : 15.9994\nCategory : Non Metal\n1st Ionization Energy : 1313.9\nElecronegativity : 3.44")
+    elif symbol == "f":
+        print("Atomic No. : 9\nName : Fluorine\nAtomic Mass : 18.998403\nCategory : Halogen\n1st Ionization Energy : 1681.0\nElecronegativity : 3.98")
+    elif symbol == "ne":
+        print("Atomic No. : 10\nName : Neon\nAtomic Mass : 20.1797\nCategory : Noble Gas\n1st Ionization Energy : 2080.7\nElecronegativity : Nil")
+    elif symbol == "na":
+        print("Atomic No. : 11\nName : Sodium\nAtomic Mass : 22.98976\nCategory : Alkali Metal\n1st Ionization Energy : 495.8\nElecronegativity : 0.93")
+    elif symbol == "mg":
+        print("Atomic No. : 12\nName : Magnesium\nAtomic Mass : 24.3050\nCategory : Alkaline Metal\n1st Ionization Energy : 737.7\nElecronegativity : 1.31")
+    elif symbol == "al":
+        print("Atomic No. : 13\nName : Aluminium\nAtomic Mass : 26.98153\nCategory : Other Metal\n1st Ionization Energy : 577.5\nElecronegativity : 1.61")
+    elif symbol == "si":
+        print("Atomic No. : 14\nName : Silicon\nAtomic Mass : 28.0855\nCategory : Metalloid\n1st Ionization Energy : 786.5\nElecronegativity : 1.90")
+    elif symbol == "p":
+        print("Atomic No. : 15\nName : Phosphorus\nAtomic Mass : 30.97696\nCategory : Non Metal\n1st Ionization Energy : 1011.8\nElecronegativity : 2.19")
+    elif symbol == "s":
+        print("Atomic No. : 16\nName : Sulphur\nAtomic Mass : 32.065\nCategory : Non Metal\n1st Ionization Energy : 999.6\nElecronegativity : 2.58")
+    elif symbol == "cl":
+        print("Atomic No. : 17\nName : Chlorine\nAtomic Mass : 35.453\nCategory : Halogen\n1st Ionization Energy : 1251.2\nElecronegativity : 3.16")
+    elif symbol == "ar":
+        print("Atomic No. : 18\nName : Argon\nAtomic Mass : 39.948\nCategory : Noble Gas\n1st Ionization Energy : 1520.6\nElecronegativity : Nil")
+    elif symbol == "k":
+        print("Atomic No. : 19\nName : Potassium/Potash\nAtomic Mass : 39.0983\nCategory : Alkali Metal\n1st Ionization Energy : 418.8\nElecronegativity : 0.82")
+    elif symbol == "ca":
+        print("Atomic No. : 20\nName : Calcium\nAtomic Mass : 40.078\nCategory : Alkaline Metal\n1st Ionization Energy : 589.8\nElecronegativity : 1.00")
+    elif symbol == "sc":
+        print("Atomic No. : 21\nName : Scandium\nAtomic Mass : 44.95591\nCategory : Transition Metal\n1st Ionization Energy : 633.1\nElecronegativity : 1.36")
+    elif symbol == "ti":
+        print("Atomic No. : 22\nName : Titanium\nAtomic Mass : 47.867\nCategory : Transition Metal\n1st Ionization Energy : 658.8\nElecronegativity : 1.54")
+    elif symbol == "v":
+        print("Atomic No. : 23\nName : Vanadium\nAtomic Mass : 50.9415\nCategory : Transition Metal\n1st Ionization Energy : 650.9\nElecronegativity : 1.63")
+    elif symbol == "cr":
+        print("Atomic No. : 24\nName : Chromium\nAtomic Mass : 51.9962\nCategory : Transition Metal\n1st Ionization Energy : 652.9\nElecronegativity : 1.66")
+    elif symbol == "mn":
+        print("Atomic No. : 25\nName : Manganese\nAtomic Mass : 54.93804\nCategory : Transition Metal\n1st Ionization Energy : 717.3\nElecronegativity : 1.55")
+    elif symbol == "fe":
+        print("Atomic No. : 26\nName : Iron\nAtomic Mass : 55.845\nCategory : Transition Metal\n1st Ionization Energy : 762.5\nElecronegativity : 1.83")
+    elif symbol == "co":
+        print("Atomic No. : 27\nName : Cobalt\nAtomic Mass : 58.93319\nCategory : Transition Metal\n1st Ionization Energy : 760.4\nElecronegativity : 1.91")
+    elif symbol == "ni":
+        print("Atomic No. : 28\nName : Nickel\nAtomic Mass : 58.6934\nCategory : Transition Metal\n1st Ionization Energy : 737.1\nElecronegativity : 1.88")
+    elif symbol == "cu":
+        print("Atomic No. : 29\nName : Copper\nAtomic Mass : 63.546\nCategory : Transition Metal\n1st Ionization Energy : 745.5\nElecronegativity : 1.90")
+    elif symbol == "zn":
+        print("Atomic No. : 30\nName : Zinc\nAtomic Mass : 65.38\nCategory : Transition Metal\n1st Ionization Energy : 906.4\nElecronegativity : 1.65")
+    elif symbol == "ga":
+        print("Atomic No. : 31\nName : Gallium\nAtomic Mass : 69.723\nCategory : Other Metal\n1st Ionization Energy : 577.5\nElecronegativity : 1.61")
+    elif symbol == "ge":
+        print("Atomic No. : 32\nName : Germanium\nAtomic Mass : 72.64\nCategory : Metalloid\n1st Ionization Energy : 762.0\nElecronegativity : 2.01")
+    elif symbol == "as":
+        print("Atomic No. : 33\nName : Arsenic\nAtomic Mass : 74.92160\nCategory : Metalloid\n1st Ionization Energy : 947.0\nElecronegativity : 2.18")
+    elif symbol == "se":
+        print("Atomic No. : 34\nName : Selenium\nAtomic Mass : 78.96\nCategory : Non Metal\n1st Ionization Energy : 941.0\nElecronegativity : 2.55")
+    elif symbol == "br":
+        print("Atomic No. : 35\nName : Bromine\nAtomic Mass : 79.904\nCategory : Halogen\n1st Ionization Energy : 1139.9\nElecronegativity : 2.96")
+    elif symbol == "kr":
+        print("Atomic No. : 36\nName : Krypton\nAtomic Mass : 83.798\nCategory : Noble Gas\n1st Ionization Energy : 1350.8\nElecronegativity : 3.00")
+    elif symbol == "rb":
+        print("Atomic No. : 37\nName : Rubidium\nAtomic Mass : 85.4678\nCategory : Alkali Metal\n1st Ionization Energy : 403.0\nElecronegativity : 0.82")
+    elif symbol == "sr":
+        print("Atomic No. : 38\nName : Strontium\nAtomic Mass : 87.62\nCategory : Alkaline Metal\n1st Ionization Energy : 549.5\nElecronegativity : 0.95")
+    elif symbol == "y":
+        print("Atomic No. : 39\nName : Yttrium\nAtomic Mass : 88.90585\nCategory : Transition Metal\n1st Ionization Energy : 600.0\nElecronegativity : 1.22")
+    elif symbol == "zr":
+        print("Atomic No. : 40\nName : Zirconium\nAtomic Mass : 91.224\nCategory : Transition Metal\n1st Ionization Energy : 640.1\nElecronegativity : 1.33")
+    elif symbol == "nb":
+        print("Atomic No. : 41\nName : Niobium\nAtomic Mass : 92.90638\nCategory : Transition Metal\n1st Ionization Energy : 652.1\nElecronegativity : 1.60")
+    elif symbol == "mo":
+        print("Atomic No. : 42\nName : Molybdenum\nAtomic Mass : 95.96\nCategory : Transition Metal\n1st Ionization Energy : 684.3\nElecronegativity : 2.16")
+    elif symbol == "tc":
+        print("Atomic No. : 43\nName : Technetium\nAtomic Mass : 98\nCategory : Transition Metal as well as radioactive element\n1st Ionization Energy : 702.0\nElecronegativity : 1.90")
+    elif symbol == "ru":
+        print("Atomic No. : 44\nName : Ruthenium\nAtomic Mass : 101.07\nCategory : Transition Metal\n1st Ionization Energy : 710.2\nElecronegativity : 2.20")
+    elif symbol == "pd":
+        print("Atomic No. : 46\nName : Palladium\nAtomic Mass : 106.42\nCategory : Transition Metal\n1st Ionization Energy : 804.4\nElecronegativity : 2.20")
+    elif symbol == "rh":
+        print("Atomic No. : 45\nName : Rhodium\nAtomic Mass : 102.9055\nCategory : Transition Metal\n1st Ionization Energy : 719.7\nElecronegativity : 2.28")
+    elif symbol == "ag":
+        print("Atomic No. : 47\nName : Silver\nAtomic Mass : 107.8682\nCategory : Transition Metal\n1st Ionization Energy : 731.0\nElecronegativity : 1.93")
+    elif symbol == "cd":
+        print("Atomic No. : 48\nName : Cadmium\nAtomic Mass : 112.441\nCategory : Transition Metal\n1st Ionization Energy : 867.8\nElecronegativity : 1.69")
+    elif symbol == "in":
+        print("Atomic No. : 49\nName : indium\nAtomic Mass : 114.818\nCategory : Other Metal\n1st Ionization Energy : 556.3\nElecronegativity : 1.78")
+    elif symbol == "sn":
+        print("Atomic No. : 50\nName : Tin\nAtomic Mass : 118.710\nCategory : Other Metal\n1st Ionization Energy : 708.6\nElecronegativity : 1.96")
+    elif symbol == "sb":
+        print("Atomic No. :51 \nName : Antimony\nAtomic Mass : 121.760\nCategory : Metalloid\n1st Ionization Energy : 834.0\nElecronegativity : 2.05")
+    elif symbol == "te":
+        print("Atomic No. : 52\nName : Tellurium\nAtomic Mass : 127.60\nCategory : Metalloid\n1st Ionization Energy : 869.3\nElecronegativity : 2.10")
+    elif symbol == "i":
+        print("Atomic No. : 53\nName : Iodine\nAtomic Mass : 126.9044\nCategory : Halogen\n1st Ionization Energy : 1006.4\nElecronegativity : 2.66")
+    elif symbol == "xe":
+        print("Atomic No. :54\nName : Xenon\nAtomic Mass : 131.293\nCategory : Noble Gas\n1st Ionization Energy : 1170.4\nElecronegativity : 2.60")
+    elif symbol == "cs":
+        print("Atomic No. : 55\nName : Caesium\nAtomic Mass : 132.9054\nCategory : Alkali Metal\n1st Ionization Energy : 375.7\nElecronegativity : 0.79")
+    elif symbol == "ba":
+        print("Atomic No. : 56\nName : Barium\nAtomic Mass : 137.327\nCategory : Alkaline Metal\n1st Ionization Energy : 0.79\nElecronegativity : 0.89")
+    elif symbol == "la":
+        print("Atomic No. : 57\nName : Lanthanum\nAtomic Mass : 138.9054\nCategory : Lantahanoid\n1st Ionization Energy : 638.1\nElecronegativity : 1.10")
+    elif symbol == "ce":
+        print("Atomic No. : 58\nName : Cerium\nAtomic Mass : 140.116\nCategory : Lanthanoid\n1st Ionization Energy : 534.4\nElecronegativity : 1.12")
+    elif symbol == "pr":
+        print("Atomic No. : 59\nName : Praseodymium\nAtomic Mass : 140.9076\nCategory : Lanthanoid\n1st Ionization Energy : 527.0\nElecronegativity : 1.13")
+    elif symbol == "nd":
+        print("Atomic No. : 60\nName : Neodymium\nAtomic Mass : 144.242\nCategory : Lanthanoid\n1st Ionization Energy : 533.1\nElecronegativity : 1.14")
+    elif symbol == "pm":
+        print("Atomic No. : 61\nName : Promethium\nAtomic Mass : 145\nCategory : Lanthanoid as well as radioactive element\n1st Ionization Energy : 540.0\nElecronegativity : Nil")
+    elif symbol == "sm":
+        print("Atomic No. : 62\nName : Samarium\nAtomic Mass : 150.36\nCategory : Lanthanoid\n1st Ionization Energy : 544.5\nElecronegativity : 1.17")
+    elif symbol == "eu":
+        print("Atomic No. : 63\nName : Europium\nAtomic Mass : 151.964\nCategory : Lanthanoid\n1st Ionization Energy : 547.1\nElecronegativity : Nil")
+    elif symbol == "gd":
+        print("Atomic No. : 64\nName : Gadolinium\nAtomic Mass : 157.25\nCategory : Lanthanoid\n1st Ionization Energy : 593.4\nElecronegativity : 1.20")
+    elif symbol == "tb":
+        print("Atomic No. : 65\nName : Terbium\nAtomic Mass : 158.9253\nCategory : Lanthanoid\n1st Ionization Energy : 565.8\nElecronegativity : Nil")
+    elif symbol == "dy":
+        print("Atomic No. : 66\nName : Dysprosium\nAtomic Mass : 162.500\nCategory : Lanthanoid\n1st Ionization Energy : 573.0\nElecronegativity : 1.22")
+    elif symbol == "ho":
+        print("Atomic No. : 67\nName : Holmium\nAtomic Mass : 164.9303\nCategory : Lanthanoid\n1st Ionization Energy : 581.0\nElecronegativity : 1.23")
+    elif symbol == "er":
+        print("Atomic No. : 68\nName : Erbium\nAtomic Mass : 167.259\nCategory : Lanthanoid\n1st Ionization Energy : 589.3\nElecronegativity : 1.24")
+    elif symbol == "tm":
+        print("Atomic No. : 69\nName : Thullium\nAtomic Mass : 168.9342\nCategory : Lanthanoid\n1st Ionization Energy : 596.7\nElecronegativity : 1.25")
+    elif symbol == "yb":
+        print("Atomic No. : 70\nName : Ytterbium\nAtomic Mass : 173.054\nCategory : Lanthanoid\n1st Ionization Energy : 603.4\nElecronegativity : Nil")
+    elif symbol == "lu":
+        print("Atomic No. : 71\nName : Lutetium\nAtomic Mass : 174.9668\nCategory : Transition Metal\n1st Ionization Energy : 523.5\nElecronegativity : 1.27")
+    elif symbol == "hf":
+        print("Atomic No. : 72\nName : Hafnium\nAtomic Mass : 178.49\nCategory : Transition Metal\n1st Ionization Energy : 658.5\nElecronegativity : 1.30")
+    elif symbol == "ta":
+        print("Atomic No. : 73\nName : Tantalum\nAtomic Mass : 180.9478\nCategory : Transition Metal\n1st Ionization Energy : 761.0\nElecronegativity : 1.50")
+    elif symbol == "w":
+        print("Atomic No. : 74\nName : Tungsten\nAtomic Mass : 183.84\nCategory : Transition Metal\n1st Ionization Energy : 770.0\nElecronegativity : 2.36")
+    elif symbol == "re":
+        print("Atomic No. : 75\nName : Rhenium\nAtomic Mass : 186.207\nCategory : Transition Metal\n1st Ionization Energy : \760.0nElecronegativity : 1.90")
+    elif symbol == "os":
+        print("Atomic No. : 76\nName : Osmium\nAtomic Mass : 190.23\nCategory : Transition Metal\n1st Ionization Energy : 840.0\nElecronegativity : 2.20")
+    elif symbol == "ir":
+        print("Atomic No. : 77\nName : Iridium\nAtomic Mass : 192.217\nCategory : Transition Metal\n1st Ionization Energy : 880.0\nElecronegativity : 2.20")
+    elif symbol == "pt":
+        print("Atomic No. : 78\nName : Platinum\nAtomic Mass : 195.084\nCategory : Transition Metal\n1st Ionization Energy : 870.0\nElecronegativity : 2.28")
+    elif symbol == "au":
+        print("Atomic No. : 79\nName : Gold\nAtomic Mass : 196.9665\nCategory : Transition Metal\n1st Ionization Energy : 890.1\nElecronegativity : 2.54")
+    elif symbol == "hg":
+        print("Atomic No. : 80\nName : Mercury\nAtomic Mass : 200.59\nCategory : Transition Metal\n1st Ionization Energy : 1007.1\nElecronegativity : 2.00")
+    elif symbol == "tl":
+        print("Atomic No. : 81\nName : Thallium\nAtomic Mass : 204.3833\nCategory : Other Metal\n1st Ionization Energy : 569.4\nElecronegativity : 1.62")
+    elif symbol == "pb":
+        print("Atomic No. : 82\nName : Lead\nAtomic Mass : 207.2\nCategory : Other Metal\n1st Ionization Energy : 715.6\nElecronegativity : 2.33")
+    elif symbol == "bi":
+        print("Atomic No. : 83\nName : Bismuth\nAtomic Mass : 208.9804\nCategory : Other Matal\n1st Ionization Energy : 703.0\nElecronegativity : 2.02")
+    elif symbol == "po":
+        print("Atomic No. : 84\nName : Polonium\nAtomic Mass : 210\nCategory : Metalloid as well as radioactive element\n1st Ionization Energy : 812.1\nElecronegativity : 2.00")
+    elif symbol == "at":
+        print("Atomic No. : 85\nName : Astatine\nAtomic Mass : 210\nCategory : Halogen as well as radioactive element\n1st Ionization Energy : 890.0\nElecronegativity : 2.20")
+    elif symbol == "rn":
+        print("Atomic No. : 86\nName : Radon\nAtomic Mass : 220\nCategory : Noble gas as well as radioactive element\n1st Ionization Energy : 1037.0\nElecronegativity : Nil")
+    elif symbol == "fr":
+        print("Atomic No. : 87\nName : Francium\nAtomic Mass : 223\nCategory : Alkali Metal as well as radioactive element\n1st Ionization Energy : 380.0\nElecronegativity : 0.70")
+    elif symbol == "ra":
+        print("Atomic No. : 88\nName : Radium\nAtomic Mass : 226\nCategory : Alkaline Metal as well as radioactive element\n1st Ionization Energy : 509.3\nElecronegativity : 0.90")
+    elif symbol == "ac":
+        print("Atomic No. : 89\nName : Actinium\nAtomic Mass : 227\nCategory : Actinoid as well as radioactive element\n1st Ionization Energy : 499.0\nElecronegativity : 1.10")
+    elif symbol == "th":
+        print("Atomic No. : 90\nName : Thorium\nAtomic Mass : 232.0380\nCategory : Actinoid\n1st Ionization Energy : 587.0\nElecronegativity : 1.30")
+    elif symbol == "pa":
+        print("Atomic No. : 91\nName : Protactinium\nAtomic Mass : 231.0358\nCategory : Actinoid\n1st Ionization Energy : 568.0\nElecronegativity : 1.50")
+    elif symbol == "u":
+        print("Atomic No. : 92\nName : Uranium\nAtomic Mass : 238.0289\nCategory : Actinoid\n1st Ionization Energy : 597.6\nElecronegativity : 1.38")
+    elif symbol == "np":
+        print("Atomic No. : 93\nName : Neptunium\nAtomic Mass : 237\nCategory : Actinoid as well as radioactive element\n1st Ionization Energy : 604.5\nElecronegativity : 1.36")
+    elif symbol == "pu":
+        print("Atomic No. : 94\nName : Plutonium\nAtomic Mass : 244\nCategory : Actinoid as well as radioactive element\n1st Ionization Energy : 584.7\nElecronegativity : 1.28")
+    elif symbol == "am":
+        print("Atomic No. : 95\nName : Americium\nAtomic Mass : 243\nCategory : Actinoid as well as radioactive element\n1st Ionization Energy : 578.0\nElecronegativity : .30")
+    elif symbol == "cm":
+        print("Atomic No. : 96\nName : Curium\nAtomic Mass : 247\nCategory : Actinoid as well as radioactive element\n1st Ionization Energy : 581.0\nElecronegativity : 1.30")
+    elif symbol == "bk":
+        print("Atomic No. : 97\nName : Berkelium\nAtomic Mass : 247\nCategory : Actinoid as well as radioactive element\n1st Ionization Energy : 601.0\nElecronegativity : 1.30")
+    elif symbol == "cf":
+        print("Atomic No. : 98\nName : Californium\nAtomic Mass : 251\nCategory : Actinoid as well as radioactive element\n1st Ionization Energy : 608.0\nElecronegativity : 1.30")
+    elif symbol == "es":
+        print("Atomic No. : 99\nName : Einsteinium\nAtomic Mass : 252\nCategory : Actinoid as well as radioactive element\n1st Ionization Energy : 619.0\nElecronegativity : 1.30")
+    elif symbol == "fm":
+        print("Atomic No. : 100\nName : Fermium\nAtomic Mass : 257\nCategory : Actinoid as well as radioactive element\n1st Ionization Energy : 627.0\nElecronegativity : 1.30")
+    elif symbol == "md":
+        print("Atomic No. : 101\nName : Mendelevium\nAtomic Mass : 258\nCategory : Actinoid as well as radioactive element\n1st Ionization Energy : 635.0\nElecronegativity : 1.30")
+    elif symbol == "no":
+        print("Atomic No. : 102\nName : Nobelium\nAtomic Mass : 259\nCategory : Actinoid as well as radioactive element\n1st Ionization Energy : 642.0\nElecronegativity : 1.30")
+    elif symbol == "lr":
+        print("Atomic No. : 103\nName : Lawrencium\nAtomic Mass : 262\nCategory : Transition Metal as well as radioactive element\n1st Ionization Energy : 470.0\nElecronegativity : Nil")
+    elif symbol == "rf":
+        print("Atomic No. : 104\nName : Rutherfordium\nAtomic Mass : 261\nCategory : Transition Metal as well as radioactive element\n1st Ionization Energy : 580.0\nElecronegativity : Nil")
+    elif symbol == "db":
+        print("Atomic No. : 105\nName : Dubnium\nAtomic Mass : 262\nCategory : Transition Metal as well as radioactive element\n1st Ionization Energy : Nil\nElecronegativity : Nil")
+    elif symbol == "sg":
+        print("Atomic No. : 106\nName : Seaborgium\nAtomic Mass : 266\nCategory : Transition Metal as well as radioactive element\n1st Ionization Energy : Nil\nElecronegativity : Nil")
+    elif symbol == "bh":
+        print("Atomic No. : 107\nName : Bohrium\nAtomic Mass : 264\nCategory : Transition Metal as well as radioactive element\n1st Ionization Energy : Nil\nElecronegativity : Nil")
+    elif symbol == "hs":
+        print("Atomic No. : 108\nName : Hassium\nAtomic Mass : 277\nCategory : Transition Metal as well as radioactive element\n1st Ionization Energy : Nil\nElecronegativity : Nil")
+    elif symbol == "mt":
+        print("Atomic No. : 109\nName : Meitnerium\nAtomic Mass : 268\nCategory : Transition Metal as well as radioactive element\n1st Ionization Energy : Nil\nElecronegativity : Nil")
+    elif symbol == "ds":
+        print("Atomic No. : 110\nName : Darmstadium\nAtomic Mass : 271\nCategory : Transition Metal as well as radioactive element\n1st Ionization Energy : Nil\nElecronegativity : Nil")
+    elif symbol == "rg":
+        print("Atomic No. : 111\nName : Roentgenium\nAtomic Mass : 272\nCategory : Transition Metal as well as radioactive element\n1st Ionization Energy : Nil\nElecronegativity : Nil")
+    elif symbol == "cn":
+        print("Atomic No. : 112\nName : Copernicium\nAtomic Mass : 285\nCategory : Transition Metal as well as radioactive element\n1st Ionization Energy : Nil\nElecronegativity : Nil")
+    elif symbol == "uut":
+        print("Atomic No. : 113\nName : Ununtrium\nAtomic Mass : 284\nCategory : Radioactive element\n1st Ionization Energy : Nil\nElecronegativity : Nil")
+    elif symbol == "fl":
+        print("Atomic No. : 114\nName : Flerovium\nAtomic Mass : 289\nCategory : Radioactive element\n1st Ionization Energy : Nil\nElecronegativity : Nil")
+    elif symbol == "uup":
+        print("Atomic No. : 115\nName : Ununpentium\nAtomic Mass : 288\nCategory : Radioactive element\n1st Ionization Energy : Nil\nElecronegativity : Nil")
+    elif symbol == "lv":
+        print("Atomic No. : 116\nName : Livermorium\nAtomic Mass : 292\nCategory : Radioactive element\n1st Ionization Energy : Nil\nElecronegativity : Nil")
+    elif symbol == "uus":
+        print("Atomic No. : 117\nName : Ununseptium\nAtomic Mass : Not Found\nCategory : Radioactive element\n1st Ionization Energy : Nil\nElecronegativity : Nil")
+    elif symbol == "uuo":
+        print("Atomic No. : 118\nName : Ununoctium\nAtomic Mass : 294\nCategory : Radioactive element\n1st Ionization Energy : Nil\nElecronegativity : Nil")
+
+
+    restart = str(input("Do you want to continue (y/n) : "))
+
+    if restart == "y":
+        main()
+    else:
+        exit()
+
+main()

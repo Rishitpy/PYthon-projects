@@ -1,0 +1,59 @@
+from matplotlib import pyplot as plt
+
+
+# simple program by sentdex
+"""plt.plot([5, 6, 7, 8], [7, 3, 8, 3])
+plt.show()
+
+
+bottom_axis_x = [10,11, 12, 13, 14, 15]
+side_axis_y = [20, 15, 17, 13, 19, 17]
+plt.plot(bottom_axis_x, side_axis_y)
+plt.show()"""
+
+
+# difficult program by matplotlib.org
+"""import numpy as np
+import matplotlib.pyplot as plt
+
+a = np.arange(0, 3, .02)
+c = np.exp(a)
+d = c[::-1]
+
+plt.subplots()
+
+plt.plot(a, c, 'k--', label='Model length')
+plt.plot(a, d, 'k:', label='Data length')
+plt.plot(a, c + d, 'k', label='Total message length')
+
+legend = plt.legend(loc='upper center', shadow=True, fontsize='x-large')
+legend.get_frame().set_facecolor('#00FFCC')
+
+plt.show()"""
+
+
+# function program by me
+"""def Plotting(bottom_axis, side_axis):
+    plt.plot(bottom_axis, side_axis)
+    plt.show()
+
+Plotting([2, 3, 4, 5], [3, 2, 5, 2])"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

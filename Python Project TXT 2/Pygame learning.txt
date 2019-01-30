@@ -1,0 +1,253 @@
+import pygame
+pygame.init()
+
+win = pygame.display.set_mode((1500, 750))
+
+pygame.mixer.music.load("games_song.mp3")
+winning = pygame.mixer.Sound("applause.wav")
+over = pygame.mixer.Sound("game_over.wav")
+
+SpaceShip = pygame.image.load("Human.png")
+AlienShip = pygame.image.load("Aliens.png")
+bg = pygame.image.load("Stars.jpg")
+clock = pygame.time.Clock()
+score = 0
+
+
+class Humans(object):
+
+    def __init__(self, x, y, height, width):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+
+        self.vel = 10
+
+        self.left = False
+        self.right = False
+        self.up = False
+        self.down = False
+
+        self.health = 30
+        self.visible = True
+
+    def move(self, window):
+        if self.visible:
+            window.blit(pygame.transform.scale(SpaceShip, (self.height, self.width)), (self.x, self.y))
+            pygame.draw.rect(window, (255, 0, 0), (self.x + 20, self.y + self.width + 10, 360, 9))
+            pygame.draw.rect(window, (0, 255, 0), (self.x + 20, self.y + self.width + 10, self.health * 12, 10))
+            pygame.display.update()
+
+    def hit(self):
+        if self.health > 0:
+            self.health -= 1
+        else:
+            self.visible = False
+
+
+class Projectile(object):
+
+    def __init__(self, x, y, radius, color):
+        self.x = x
+        self.y = y
+        self.radius = radius
+        self.color = color
+        self.velocity = 10
+
+    def shoot(self, window):
+        pygame.draw.circle(window, self.color, (self.x, self.y), self.radius)
+        pygame.display.update()
+
+
+class Aliens(object):
+
+    def __init__(self, x, y, height, width):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+
+        self.vel = 7
+
+        self.right = True
+        self.left = False
+
+        self.health = 30
+        self.visible = True
+
+    def draw(self, window):
+        if self.visible:
+            if self.right:
+                self.x += self.vel
+            if self.left:
+                self.x -= self.vel
+            window.blit(pygame.transform.scale(AlienShip, (self.height, self.width)), (self.x, self.y))
+            pygame.draw.rect(window, (255, 0, 0), (self.x, self.y - 35, 90, 9))
+            pygame.draw.rect(window, (0, 255, 0), (self.x, self.y - 35, self.health * 3, 10))
+            pygame.display.update()
+
+    def hit(self):
+        if self.health > 0:
+            self.health -= 1
+        else:
+            self.visible = False
+
+
+class AlienBullets(object):
+
+    def __init__(self, x, y, radius, color):
+        self.x = x
+        self.y = y
+        self.radius = radius
+        self.color = color
+        self.velocity = 10
+
+    def shoot(self, window):
+        pygame.draw.circle(window, self.color, (self.x, self.y), self.radius)
+        pygame.display.update()
+
+
+def redraw_window():
+    win.blit(bg, (0, 0))
+    ufo.move(win)
+    text = font.render("Score: " + str(score), 1, (255, 255, 255))
+    win.blit(text, (1350, 20))
+    won_text = win_font.render("YOU WON", 1, (0, 255, 0))
+    lost_text = over_font.render("GAME OVER", 1, (255, 0, 0))
+    alien_ufo.draw(win)
+    for magnum in bullets:
+        magnum.shoot(win)
+    for laser in alien_bullets:
+        laser.shoot(win)
+
+    if not alien_ufo.visible:
+        win.blit(won_text, (25, 100))
+        pygame.mixer.music.stop()
+        winning.play()
+    if not ufo.visible:
+        win.blit(lost_text, (25, 200))
+        pygame.mixer.music.stop()
+        over.play()
+    pygame.display.update()
+
+
+font = pygame.font.SysFont("Arial", 30, False, False)
+over_font = pygame.font.SysFont("Chiller", 300, True, False)
+win_font = pygame.font.SysFont("Comic Sans MS", 270, True, False)
+ufo = Humans(500, 500, 400, 200)
+alien_ufo = Aliens(50, 50, 120, 100)
+bullets = []
+alien_bullets = []
+shooting = 0
+if alien_ufo.visible and ufo.visible:
+    pygame.mixer.music.play(-1)
+else:
+    pygame.mixer.music.stop()
+
+pause = False
+run = True
+while run:
+    clock.tick(27)
+
+    if shooting > 0:
+        shooting += 0.5
+    if shooting > 5:
+        shooting = 0
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
+
+    for bullet in bullets:
+        if ufo.visible:
+            if 750 >= bullet.y >= 0:
+                bullet.y -= bullet.velocity
+            else:
+                bullets.pop(bullets.index(bullet))
+        if not ufo.visible:
+            bullets.pop(bullets.index(bullet))
+
+    for bullet in alien_bullets:
+        if alien_ufo.visible:
+            if 750 >= bullet.y >= 0:
+                bullet.y += bullet.velocity
+            else:
+                alien_bullets.pop(alien_bullets.index(bullet))
+        if not alien_ufo.visible:
+            alien_bullets.pop(alien_bullets.index(bullet))
+
+    keys = pygame.key.get_pressed()
+
+    if keys[pygame.K_LEFT]:
+        ufo.x -= ufo.vel
+        ufo.left = True
+        ufo.right = False
+        ufo.down = False
+        ufo.up = False
+    if keys[pygame.K_RIGHT]:
+        ufo.x += ufo.vel
+        ufo.left = False
+        ufo.right = True
+        ufo.down = False
+        ufo.up = False
+    if keys[pygame.K_UP]:
+        ufo.y -= ufo.vel
+        ufo.left = False
+        ufo.right = False
+        ufo.down = False
+        ufo.up = True
+    if keys[pygame.K_DOWN]:
+        ufo.y += ufo.vel
+        ufo.left = False
+        ufo.right = False
+        ufo.down = True
+        ufo.up = False
+    if keys[pygame.K_SPACE]:
+        if len(bullets) < 6:
+            if shooting == 0:
+                if ufo.visible and alien_ufo.visible:
+                    bullets.append(Projectile(round(ufo.x + ufo.width), round(ufo.y + ufo.height // 3.5), 7, (255, 0, 0)))
+
+    if alien_ufo.x >= 1400:
+        alien_ufo.right = False
+        alien_ufo.left = True
+    if alien_ufo.x <= 0:
+        alien_ufo.right = True
+        alien_ufo.left = False
+
+    if ufo.x <= alien_ufo.x <= ufo.x + ufo.width:
+        if len(alien_bullets) < 6:
+            if shooting == 0:
+                if alien_ufo.visible and ufo.visible:
+                    alien_bullets.append(Projectile(round(alien_ufo.x + alien_ufo.width), round(alien_ufo.y + alien_ufo.height // 3.5), 7, (255, 0, 0)))
+    else:
+        pass
+
+    for shoots in alien_bullets:
+        if ufo.visible:
+            if shoots.y + (shoots.radius * 2) > ufo.y and shoots.y < ufo.y + ufo.width:
+                if shoots.x + (shoots.radius * 2) > ufo.x and shoots.x < ufo.x + ufo.height:
+                    alien_bullets.pop(alien_bullets.index(shoots))
+                    ufo.hit()
+                    score -= 1
+    for shots in bullets:
+        if alien_ufo.visible:
+            if shots.y < alien_ufo.y + alien_ufo.height and shots.y + (shots.radius * 2) > alien_ufo.width:
+                if shots.x + (shots.radius * 2) > alien_ufo.x and shots.x < alien_ufo.x + alien_ufo.height:
+                    bullets.pop(bullets.index(shots))
+                    alien_ufo.hit()
+                    score += 1
+
+    if ufo.x >= 1500:
+        ufo.x -= 1900
+    if ufo.x <= -400:
+        ufo.x = 1500
+    if ufo.y >= 750:
+        ufo.y -= 950
+    if ufo.y <= -200:
+        ufo.y = 750
+
+    redraw_window()
+
+pygame.quit()

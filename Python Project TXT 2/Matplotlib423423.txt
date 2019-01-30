@@ -1,0 +1,12 @@
+from matplotlib import pyplot as plt
+
+x_axis = (2, 4, 6, 8, 10)
+y_axis = (5, 9, 4, 7, 8)
+
+plotted = plt.plot(x_axis, y_axis)
+
+plt.title("PLOTS")
+plt.xlabel("X AXIS")
+plt.ylabel("Y AXIS")
+
+plt.show()

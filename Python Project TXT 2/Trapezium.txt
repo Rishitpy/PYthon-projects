@@ -1,0 +1,7 @@
+top = float(input("Enter the measurement of the 1'st base of thge trapezium : "))
+base = float(input("Enter the measurement of the 2'nd base of thge trapezium : "))
+height = float(input("Enter the measurement of the height of thge trapezium : "))
+
+area: float = (top + base) / (2) * height
+
+print(area)

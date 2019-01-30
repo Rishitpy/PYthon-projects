@@ -1,0 +1,13 @@
+import time
+
+print("Hello\n" * 5)
+
+print("-" * 20)
+
+time.sleep(5)
+
+print("Bye\n" * 5)
+
+time.sleep(5)
+
+quit()

@@ -1,0 +1,20 @@
+from tkinter import *
+import csv
+from PIL import Image, ImageTk
+
+root = Tk()
+root.configure(background="white")
+root.geometry("1000x1000")
+root.title("Restaurant Bills")
+icon = PhotoImage(file="foodies.gif")
+root.tk.call('wm', 'iconphoto', root._w, icon)
+
+main_heading = Label(root, text="Restaurant Management Systems", bd=1, relief="solid", font="Times 20",
+                     foreground="navy")
+main_heading.configure(background="white")
+
+
+
+main_heading.place(x=300, y=10)
+
+root.mainloop()

@@ -1,0 +1,46 @@
+# birthday = {
+#     "rishit": "7 Sep",
+#     "ojaswee": "3 May",
+#     "jalaj": "6 Oct",
+#     "jinisha": "3 Jan",
+#     "garvit": "15 Aug",
+#     "dheerja": "18 Dec"
+# }
+#
+# data_taken = input("Enter the name to get his/her birthday: ").lower()
+#
+# if data_taken == "" or data_taken == " ":
+#     print("Invalid data.")
+# elif data_taken in birthday:
+#     print("{}'s birthday is on {}.".format(data_taken,  birthday[data_taken]))
+# elif data_taken not in birthday:
+#     print("This data is not present in the dictionary.")
+# # .items() = the whole dictionary
+# # .keys() = the keys
+# # .values() = values of the keys
+
+import pprint
+
+# items = {
+#     "apples": 5,
+#     "eggs": 2,
+#     "cups": 3
+# }
+#
+# # print("I have bought {} apples.".format(str(items.get("apples", 0))))
+# # print("I have bought {} bananas.".format(str(items.get("bananas", 0))))
+#
+# items.setdefault("bananas", 4)
+# items.setdefault("bananas", 10)
+# items.setdefault("watermelon", 1)
+# print(items)
+
+# import pprint
+# message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+# count = {}
+#
+# for character in message:
+#     count.setdefault(character, 0)
+#     count[character] = count[character] + 1
+#
+# pprint.pprint(count)

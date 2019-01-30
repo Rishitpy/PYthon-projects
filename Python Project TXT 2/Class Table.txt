@@ -1,0 +1,12 @@
+class Table():
+
+    def __init__(self, mass, name):
+        self.mass = mass
+        self.name = name
+    def get_value(self, mass, name, sym = input("Enter the symbol of element"):
+        pass
+    def print_value(self, mass, name, sym):
+        print(mass, "\n", name)
+Hydrogen = Table()
+Hydrogen.get_value(1.00794, "Hydrogen")
+Hydrogen.print_value()

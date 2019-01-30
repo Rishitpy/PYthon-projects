@@ -1,0 +1,57 @@
+def main():
+    def isphonenumber(phone):
+        isamerica = False
+        isindia = False
+        phone_no = 0
+        if phone[0:2] == "+1":
+            phone_no += 1
+        elif phone[0:3] == "+91":
+            phone_no += 2
+        else:
+            phone_no += 0
+
+        if phone_no == 1:
+            if phone[2] != "-" or phone[2] != " ":
+                isamerica = False
+            if phone[3:6] != "\d\d\d":
+                isamerica = False
+            if phone[6] != "-" or phone[6] != " ":
+                isamerica = False
+            if phone[7:10] != "\d\d\d":
+                isamerica = False
+            if phone[10] != "-" or phone[10] != " ":
+                isamerica = False
+            if phone[11:-1] != "\d\d\d\d":
+                isamerica = False
+            isamerica = True
+        elif phone_no == 2:
+            if phone[3] != "-" or phone[3] != " ":
+                isindia = False
+            if phone[4:9] != "\d\d\d\d\d":
+                isindia = False
+            if phone[9] != "-" or phone[9] != " ":
+                isindia = False
+            if phone[10:-1] != "\d\d\d\d\d":
+                isindia = False
+            isindia = True
+        else:
+            print("Invalid phone number.")
+
+        if isamerica:
+            print("This phone number is valid. This phone number is of America.")
+        if isindia:
+            print("This phone number is valid. This phone number is of India.")
+
+    phone_number = input("Enter the phone number: ")
+    isphonenumber(phone_number)
+
+    restart = input("Type (Y) for repeating or (N) for quitting.").lower()
+    if restart == "y":
+        main()
+    elif restart == "n":
+        quit()
+    else:
+        quit()
+
+
+main()

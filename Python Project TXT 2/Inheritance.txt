@@ -1,0 +1,19 @@
+def parent(first_name, last_name):
+    print("Parent's name is {} {}".format(first_name, last_name))
+    pass
+
+
+p_first_name = input("Enter the parent's first name: ")
+p_last_name = input("Enter the parent's last name: ")
+
+
+def child(first_name):
+    print("{} {} child's name is {} {}".format(p_first_name, p_last_name, first_name, p_last_name))
+    pass
+
+
+parent(p_first_name, p_last_name)
+c_name = input("Enter the child's name: ")
+child(c_name)
+
+# +91-12345-67890

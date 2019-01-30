@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+from matplotlib import style
+
+style.use("dark_background")
+
+x = ("i5 9600k", "i7 9700k", "i9 9900k", "i9 9900x", "i9 9920x", "i9 9940x", "i9 9980xe")
+y = (13442, 17295, 20145, 23737, 27102, 28835, 30605)
+
+plt.barh(x, y, color="y", height=0.2)
+
+plt.title("INTEL 9th GEN DESKTOP CPU BENCHMARK")
+plt.xlabel("Score")
+plt.ylabel("Processor")
+
+plt.show()

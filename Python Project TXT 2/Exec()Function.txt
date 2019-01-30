@@ -1,0 +1,10 @@
+start = 0
+
+while start >= 100:
+    input(">>> ")
+    if input != "quit" or input != "quit()" or input != "exit" or input != "exit()":
+        exec(input)
+    elif input == "quit" or input == "quit()" or input == "exit" or input == "exit()":
+        quit()
+
+    start += 1

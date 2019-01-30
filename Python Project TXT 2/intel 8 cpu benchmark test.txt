@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+from matplotlib import style
+
+style.use("dark_background")
+
+x = ("i3 8100", "i3 8350k", "i5 8400", "i5 8500", "i5 8600", "i5 8600k", "i7 8700k", "i7 8700t", "i7 8086k")
+y = (8061, 9242, 11643, 11892, 12636, 12773, 15957, 12625, 16693)
+
+plt.barh(x, y, color="g", height=0.2)
+
+plt.title("INTEL 8th GEN DESKTOP CPU BENCHMARK")
+plt.xlabel("Score")
+plt.ylabel("Processor")
+
+plt.show()

@@ -1,0 +1,39 @@
+import pyautogui
+import time
+from pynput.keyboard import Key, Controller
+
+print(pyautogui.position())
+
+pyautogui.click(155, 869)
+time.sleep(8)
+
+# pyautogui.hotkey("win", "r")
+# pyautogui.typewrite("Notepad")
+# pyautogui.typewrite(["enter"])
+# time.sleep(1)
+# pyautogui.typewrite("Some text is written in this pad by using pyautogui commands.")
+# time.sleep(4)
+#
+keyboard = Controller()
+
+pyautogui.click(432, 17)        # close the first tab
+time.sleep(1)
+
+pyautogui.click(432, 17)        # close the the second tab
+time.sleep(1)
+
+pyautogui.click(240, 14)        # close the second tab after closing the second tab
+time.sleep(1)
+
+pyautogui.click(558, 163)
+time.sleep(1)
+
+pyautogui.typewrite("illegal weapon")
+time.sleep(3)
+
+# pyautogui.click(1136, 159)
+keyboard.press(Key.enter)       # or pyautogui.typewrite(['enter'])
+keyboard.release(Key.enter)
+time.sleep(3)
+
+pyautogui.click(461, 587)

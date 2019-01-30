@@ -1,0 +1,10 @@
+open_file = open("Files.txt", "a+")
+
+customer = input("Enter your email to sign in: ")
+
+if customer in open_file.read():
+    print("You are already signed in.")
+else:
+    open_file.write(customer + "\n")
+
+open_file.close()

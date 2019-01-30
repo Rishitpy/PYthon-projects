@@ -1,0 +1,7 @@
+words = input("Enter the words with a comma to sort them : ")
+
+new_words = words.split()
+
+new_words.sort(a < z)
+
+print(list(new_words))

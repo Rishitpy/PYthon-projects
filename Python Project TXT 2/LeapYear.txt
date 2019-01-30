@@ -1,0 +1,14 @@
+year = int(input("Enter the year : "))
+
+
+def is_leap(or_ye):
+    or_ye = year
+    if or_ye % 4 == 0:
+        print("{} is a leap year.".format(or_ye))
+    elif or_ye % 4 != 0:
+        print("{} is not a leap year.".format(or_ye))
+    else:
+        pass
+
+
+is_leap()

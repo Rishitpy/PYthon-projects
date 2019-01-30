@@ -1,0 +1,6 @@
+number = input("Please enter a number: ")
+
+if number.isdecimal():
+    print("Your input is a correct number.")
+else:
+    print("Your input is not a correct number.")

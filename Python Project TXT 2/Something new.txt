@@ -1,0 +1,28 @@
+def isPhoneNumber(text):
+    if len(text) != 15:
+        return False
+    if text[0] != "+":
+        return False
+    if text[1] != "9" and text[2] != "1":
+        return False
+    if text[3] != " ":
+        return False
+    for num in range(4, 9):
+        if not text[num].isdecimal():
+            return False
+    if text[9] != ' ':
+        return False
+    for num in range(10, 15):
+        if not text[num].isdecimal():
+            return False
+    return True
+
+
+# number = input("Enter your number (+91 XXXXX XXXXX): ")
+# print(isPhoneNumber(number))
+notice = "Please call me on my number which is +91 80678 67327 or my office number which is +91 99991 81185"
+
+for i in range(len(notice)):
+    chunk = notice[i:i+15]
+    if isPhoneNumber(chunk):
+        print("Phone number found: {}".format(chunk))

@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+from matplotlib import style
+import numpy as np
+
+style.use("ggplot")
+
+x1 = np.arange(0, 10, 0.5)
+x = np.random.randn(len(x1))
+y1 = np.arange(0, 10, 0.5)
+y = np.random.randn(len(y1))
+z1 = np.arange(0, 10, 0.5)
+z = np.random.randn(len(z1))
+
+plt.plot(x1, x, color="b", label="X")
+plt.plot(y1, y, color="r", label="Y")
+plt.plot(z1, z, color="g", label="Z")
+plt.legend()
+plt.title("RANDOM NUMBERS")
+
+plt.show()

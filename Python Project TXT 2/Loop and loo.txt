@@ -1,0 +1,6 @@
+stack = True
+number = 0
+
+while stack and number <= 1000000:
+    print("This has been {} times completed".format(number))
+    number += 1

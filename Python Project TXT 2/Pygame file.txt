@@ -1,0 +1,115 @@
+import pygame
+import random
+pygame.init()
+
+win = pygame.display.set_mode((500, 460))
+pygame.display.set_caption("Second Game")
+
+clock = pygame.time.Clock()
+
+
+class Food(object):
+
+    def __init__(self, width, radius):
+        self.width = width
+        self.radius = radius
+        self.x = random.randrange(500)
+        self.y = random.randrange(460)
+        # self.food_range_x = range(food.x - 5, food.x + 5)
+        # self.food_range_y = range(food.y - 5, food.y + 5)
+
+    def create(self):
+        pygame.draw.circle(win, (255, 255, 255), (self.x, self.y), self.radius, self.width)
+
+    def eaten(self):
+        if box.x == food.x or box.y == food.y:
+            food1 = Food(5, 5)
+            food1.create()
+            pygame.display.update()
+        else:
+            pass
+
+
+class Object(object):
+
+    def __init__(self, x, y, width, height):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.vel = 2
+        self.left = False
+        self.right = False
+        self.up = False
+        self.down = False
+
+    def apply_self(self):
+        # pygame.draw.rect(win, (255, 0, 0), (self.x, self.y, self.height, self.width))
+        pygame.draw.circle(win, (0, 255, 0), (self.x, self.y), 5, self.width)
+
+    def draw(self, window):
+        if self.up:
+            self.y -= self.vel
+            self.up = False
+        elif self.down:
+            self.y += self.vel
+            self.down = False
+        elif self.right:
+            self.x += self.vel
+            self.right = False
+        elif self.left:
+            self.x -= self.vel
+            self.left = False
+
+        pygame.display.update()
+
+
+box = Object(100, 100, 5, 5)
+food = Food(5, 5)
+run = True
+
+while run:
+    clock.tick(27)
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
+
+    key = pygame.key.get_pressed()
+    if key[pygame.K_LEFT]:
+        box.left = True
+        box.right = False
+        box.up = False
+        box.down = False
+    elif key[pygame.K_RIGHT]:
+        box.left = False
+        box.right = True
+        box.up = False
+        box.down = False
+    elif key[pygame.K_UP]:
+        box.left = False
+        box.right = False
+        box.up = True
+        box.down = False
+    elif key[pygame.K_DOWN]:
+        box.left = False
+        box.right = False
+        box.up = False
+        box.down = True
+    else:
+        pass
+
+    if box.x <= 0:
+        box.x = 500
+    elif box.x >= 500:
+        box.x = 0
+
+    if box.y <= 0:
+        box.y = 460
+    elif box.y >= 460:
+        box.y = 0
+
+    box.apply_self()
+    food.create()
+    food.eaten()
+    box.draw(win)

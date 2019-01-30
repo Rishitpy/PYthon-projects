@@ -1,0 +1,346 @@
+import pygame
+pygame.init()
+win = pygame.display.set_mode((1024, 768))
+clock = pygame.time.Clock()
+bg = pygame.image.load("bg.png")
+broke = pygame.mixer.Sound("break.wav")
+instruct = pygame.font.SysFont("Arial", 24, False, False)
+instruct_text = instruct.render("Press Space Bar to deploy your ball", 1, (0, 0, 0))
+score = 0
+score_text = instruct.render("Score: " + str(score), 1, (0, 0, 0))
+win.fill([255, 255, 255])
+
+
+class Base(object):
+
+    def __init__(self, x, y, width, height):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.vel = 20
+
+    def move(self):
+        self.draw(win)
+        if (self.x + self.width) <= (ball.x + ball.radius) <= ball.x <= self.x:
+            ball.x_vel *= -1
+        if self.y + self.height >= (ball.y + ball.radius) >= self.y and (self.x + self.width) >= (ball.x + ball.radius) >= ball.x >= self.x:
+            ball.y_vel *= -1
+        if ball.run:
+            ball.y += ball.y_vel
+
+    def draw(self, window):
+        pygame.draw.rect(window, (0, 0, 0), (self.x, self.y, self.width, self.height))
+
+
+class Breaker(object):
+
+    def __init__(self, x, y, radius, color):
+        self.x = x
+        self.y = y
+        self.radius = radius
+        self.color = color
+        self.x_vel = 5
+        self.y_vel = 5
+        self.visible = True
+        self.run = False
+
+    def move(self):
+        self.draw(win)
+        key = pygame.key.get_pressed()
+        if key[pygame.K_SPACE]:
+            self.run = True
+            self.visible = True
+        if self.run:
+            if self.visible:
+                if self.x <= 10:
+                    self.x_vel *= -1
+                if self.x + self.radius >= 1024:
+                    self.x_vel *= -1
+                if self.y <= 10:
+                    self.y_vel *= -1
+
+    def draw(self, window):
+        pygame.draw.circle(window, self.color, (self.x, self.y), self.radius)
+
+
+class Bricks(object):
+
+    def __init__(self, x, y, width, height, color):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.color = color
+        self.visible = True
+
+    def bounce(self):
+        if self.visible:
+            if (self.x + self.width) > ball.x and (ball.x + ball.radius) > self.x:
+                if (self.y + self.height) > ball.y and (ball.y + ball.radius) > self.y:
+                    ball.x_vel *= 1
+                    broke.play()
+                    self.visible = False
+                    global score
+                    score += 1
+            if (self.y + self.height) > ball.y and (ball.y + ball.radius) > self.y:
+                if (self.x + self.width) > ball.x and (ball.x + ball.radius) > self.x:
+                    ball.y_vel *= -1
+                    broke.play()
+                    self.visible = False
+                    score += 1
+            self.draw(win)
+
+    def draw(self, window):
+        pygame.draw.rect(window, self.color, (self.x, self.y, self.width, self.height))
+
+
+def redraw():
+    win.fill([255, 255, 255])
+    player.move()
+    win.blit(score_text, (30, 10))
+    start_block1.bounce()
+    ball.move()
+    if not ball.run:
+        win.blit(instruct_text, (350, 650))
+        ball.x = player.x + player.width // 2
+        ball.y = player.y - 7
+    block1.bounce()
+    block2.bounce()
+    block3.bounce()
+    block4.bounce()
+    block5.bounce()
+    block6.bounce()
+    block7.bounce()
+    block8.bounce()
+    block9.bounce()
+    block19.bounce()
+    block20.bounce()
+    block21.bounce()
+    block22.bounce()
+    block23.bounce()
+    block24.bounce()
+    block25.bounce()
+    start_block2.bounce()
+    block10.bounce()
+    block11.bounce()
+    block12.bounce()
+    block13.bounce()
+    block14.bounce()
+    block15.bounce()
+    block16.bounce()
+    block17.bounce()
+    block18.bounce()
+    block26.bounce()
+    block27.bounce()
+    block28.bounce()
+    block29.bounce()
+    block30.bounce()
+    block31.bounce()
+    block32.bounce()
+    start_block3.bounce()
+    block33.bounce()
+    block34.bounce()
+    block35.bounce()
+    block36.bounce()
+    block37.bounce()
+    block38.bounce()
+    block39.bounce()
+    block40.bounce()
+    block41.bounce()
+    block42.bounce()
+    block43.bounce()
+    block44.bounce()
+    block45.bounce()
+    block46.bounce()
+    block47.bounce()
+    block48.bounce()
+    start_block4.bounce()
+    block49.bounce()
+    block50.bounce()
+    block51.bounce()
+    block52.bounce()
+    block53.bounce()
+    block54.bounce()
+    block55.bounce()
+    block56.bounce()
+    block57.bounce()
+    block58.bounce()
+    block59.bounce()
+    block60.bounce()
+    block61.bounce()
+    block62.bounce()
+    block63.bounce()
+    block64.bounce()
+    start_block5.bounce()
+    block65.bounce()
+    block66.bounce()
+    block67.bounce()
+    block68.bounce()
+    block69.bounce()
+    block70.bounce()
+    block71.bounce()
+    block72.bounce()
+    block73.bounce()
+    block74.bounce()
+    block75.bounce()
+    block76.bounce()
+    block77.bounce()
+    block78.bounce()
+    block79.bounce()
+    block80.bounce()
+    start_block6.bounce()
+    block81.bounce()
+    block82.bounce()
+    block83.bounce()
+    block84.bounce()
+    block85.bounce()
+    block86.bounce()
+    block87.bounce()
+    block88.bounce()
+    block89.bounce()
+    block90.bounce()
+    block91.bounce()
+    block92.bounce()
+    block93.bounce()
+    block94.bounce()
+    block95.bounce()
+    block96.bounce()
+    if (ball.y + ball.radius * 2) > player.y + 30:
+        ball.visible = False
+        ball.run = False
+    pygame.display.update()
+
+
+player = Base(450, 730, 80, 10)
+ball = Breaker(player.x + player.width // 2, player.y - 7, 7, (0, 0, 0))
+pygame.display.update()
+start_block1 = Bricks(45, 50, 50, 40, (0, 0, 255))
+block1 = Bricks(100, 50, 50, 40, (255, 0, 0))
+block2 = Bricks(155, 50, 50, 40, (0, 255, 0))
+block3 = Bricks(210, 50, 50, 40, (0, 0, 255))
+block4 = Bricks(265, 50, 50, 40, (255, 0, 0))
+block5 = Bricks(320, 50, 50, 40, (0, 255, 0))
+block6 = Bricks(375, 50, 50, 40, (0, 0, 255))
+block7 = Bricks(430, 50, 50, 40, (255, 0, 0))
+block8 = Bricks(485, 50, 50, 40, (0, 255, 0))
+block9 = Bricks(540, 50, 50, 40, (0, 0, 255))
+block19 = Bricks(595, 50, 50, 40, (255, 0, 0))
+block20 = Bricks(650, 50, 50, 40, (0, 255, 0))
+block21 = Bricks(705, 50, 50, 40, (0, 0, 255))
+block22 = Bricks(760, 50, 50, 40, (255, 0, 0))
+block23 = Bricks(815, 50, 50, 40, (0, 255, 0))
+block24 = Bricks(870, 50, 50, 40, (0, 0, 255))
+block25 = Bricks(925, 50, 50, 40, (255, 0, 0))
+start_block2 = Bricks(45, 100, 50, 40, (0, 0, 255))
+block10 = Bricks(100, 100, 50, 40, (255, 0, 0))
+block11 = Bricks(155, 100, 50, 40, (0, 255, 0))
+block12 = Bricks(210, 100, 50, 40, (0, 0, 255))
+block13 = Bricks(265, 100, 50, 40, (255, 0, 0))
+block14 = Bricks(320, 100, 50, 40, (0, 255, 0))
+block15 = Bricks(375, 100, 50, 40, (0, 0, 255))
+block16 = Bricks(430, 100, 50, 40, (255, 0, 0))
+block17 = Bricks(485, 100, 50, 40, (0, 255, 0))
+block18 = Bricks(540, 100, 50, 40, (0, 0, 255))
+block26 = Bricks(595, 100, 50, 40, (255, 0, 0))
+block27 = Bricks(650, 100, 50, 40, (0, 255, 0))
+block28 = Bricks(705, 100, 50, 40, (0, 0, 255))
+block29 = Bricks(760, 100, 50, 40, (255, 0, 0))
+block30 = Bricks(815, 100, 50, 40, (0, 255, 0))
+block31 = Bricks(870, 100, 50, 40, (0, 0, 255))
+block32 = Bricks(925, 100, 50, 40, (255, 0, 0))
+start_block3 = Bricks(45, 150, 50, 40, (0, 0, 255))
+block33 = Bricks(100, 150, 50, 40, (255, 0, 0))
+block34 = Bricks(155, 150, 50, 40, (0, 255, 0))
+block35 = Bricks(210, 150, 50, 40, (0, 0, 255))
+block36 = Bricks(265, 150, 50, 40, (255, 0, 0))
+block37 = Bricks(320, 150, 50, 40, (0, 255, 0))
+block38 = Bricks(375, 150, 50, 40, (0, 0, 255))
+block39 = Bricks(430, 150, 50, 40, (255, 0, 0))
+block40 = Bricks(485, 150, 50, 40, (0, 255, 0))
+block41 = Bricks(540, 150, 50, 40, (0, 0, 255))
+block42 = Bricks(595, 150, 50, 40, (255, 0, 0))
+block43 = Bricks(650, 150, 50, 40, (0, 255, 0))
+block44 = Bricks(705, 150, 50, 40, (0, 0, 255))
+block45 = Bricks(760, 150, 50, 40, (255, 0, 0))
+block46 = Bricks(815, 150, 50, 40, (0, 255, 0))
+block47 = Bricks(870, 150, 50, 40, (0, 0, 255))
+block48 = Bricks(925, 150, 50, 40, (255, 0, 0))
+start_block4 = Bricks(45, 200, 50, 40, (0, 0, 255))
+block49 = Bricks(100, 200, 50, 40, (255, 0, 0))
+block50 = Bricks(155, 200, 50, 40, (0, 255, 0))
+block51 = Bricks(210, 200, 50, 40, (0, 0, 255))
+block52 = Bricks(265, 200, 50, 40, (255, 0, 0))
+block53 = Bricks(320, 200, 50, 40, (0, 255, 0))
+block54 = Bricks(375, 200, 50, 40, (0, 0, 255))
+block55 = Bricks(430, 200, 50, 40, (255, 0, 0))
+block56 = Bricks(485, 200, 50, 40, (0, 255, 0))
+block57 = Bricks(540, 200, 50, 40, (0, 0, 255))
+block58 = Bricks(595, 200, 50, 40, (255, 0, 0))
+block59 = Bricks(650, 200, 50, 40, (0, 255, 0))
+block60 = Bricks(705, 200, 50, 40, (0, 0, 255))
+block61 = Bricks(760, 200, 50, 40, (255, 0, 0))
+block62 = Bricks(815, 200, 50, 40, (0, 255, 0))
+block63 = Bricks(870, 200, 50, 40, (0, 0, 255))
+block64 = Bricks(925, 200, 50, 40, (255, 0, 0))
+start_block5 = Bricks(45, 250, 50, 40, (0, 0, 255))
+block65 = Bricks(100, 250, 50, 40, (255, 0, 0))
+block66 = Bricks(155, 250, 50, 40, (0, 255, 0))
+block67 = Bricks(210, 250, 50, 40, (0, 0, 255))
+block68 = Bricks(265, 250, 50, 40, (255, 0, 0))
+block69 = Bricks(320, 250, 50, 40, (0, 255, 0))
+block70 = Bricks(375, 250, 50, 40, (0, 0, 255))
+block71 = Bricks(430, 250, 50, 40, (255, 0, 0))
+block72 = Bricks(485, 250, 50, 40, (0, 255, 0))
+block73 = Bricks(540, 250, 50, 40, (0, 0, 255))
+block74 = Bricks(595, 250, 50, 40, (255, 0, 0))
+block75 = Bricks(650, 250, 50, 40, (0, 255, 0))
+block76 = Bricks(705, 250, 50, 40, (0, 0, 255))
+block77 = Bricks(760, 250, 50, 40, (255, 0, 0))
+block78 = Bricks(815, 250, 50, 40, (0, 255, 0))
+block79 = Bricks(870, 250, 50, 40, (0, 0, 255))
+block80 = Bricks(925, 250, 50, 40, (255, 0, 0))
+start_block6 = Bricks(45, 300, 50, 40, (0, 0, 255))
+block81 = Bricks(100, 300, 50, 40, (255, 0, 0))
+block82 = Bricks(155, 300, 50, 40, (0, 255, 0))
+block83 = Bricks(210, 300, 50, 40, (0, 0, 255))
+block84 = Bricks(265, 300, 50, 40, (255, 0, 0))
+block85 = Bricks(320, 300, 50, 40, (0, 255, 0))
+block86 = Bricks(375, 300, 50, 40, (0, 0, 255))
+block87 = Bricks(430, 300, 50, 40, (255, 0, 0))
+block88 = Bricks(485, 300, 50, 40, (0, 255, 0))
+block89 = Bricks(540, 300, 50, 40, (0, 0, 255))
+block90 = Bricks(595, 300, 50, 40, (255, 0, 0))
+block91 = Bricks(650, 300, 50, 40, (0, 255, 0))
+block92 = Bricks(705, 300, 50, 40, (0, 0, 255))
+block93 = Bricks(760, 300, 50, 40, (255, 0, 0))
+block94 = Bricks(815, 300, 50, 40, (0, 255, 0))
+block95 = Bricks(870, 300, 50, 40, (0, 0, 255))
+block96 = Bricks(925, 300, 50, 40, (255, 0, 0))
+run = True
+while run:
+    clock.tick(30)
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
+
+    keys = pygame.key.get_pressed()
+
+    if keys[pygame.K_LEFT]:
+        player.x -= player.vel
+    if keys[pygame.K_RIGHT]:
+        player.x += player.vel
+
+    if ball.visible and ball.run:
+        ball.x += ball.x_vel
+        ball.y += ball.y_vel
+
+    if player.x <= 00:
+        player.x += 10
+    if player.x + player.width >= 1024:
+        player.x -= 10
+
+    redraw()
+
+pygame.quit()

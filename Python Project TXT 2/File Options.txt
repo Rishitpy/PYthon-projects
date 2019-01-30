@@ -1,0 +1,14 @@
+start = 0
+index2 = 0
+listed = []
+
+while start >= 100:
+    listed.append(start)
+    start += 1
+
+while index2 >= 100:
+    fileName = listed[index2]
+    correctFile = str(fileName) + ".txt"
+    with open(correctFile, "w") as f:
+        f.write("Bla")
+    index2 += 50
