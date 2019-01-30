@@ -1,0 +1,11 @@
+from PIL import Image
+
+img = Image.open("Bucky.jpg")
+
+# area = (starting column, starting row, ending column, ending row)
+
+area = (300, 50, 800, 570)
+cropped_image = img.crop(area)
+
+img.show()
+cropped_image.show()

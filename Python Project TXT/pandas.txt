@@ -1,0 +1,7 @@
+import pandas as pd
+
+filename = 'winequality-white.csv'
+
+data = pd.read_csv(filename)
+
+data.head()

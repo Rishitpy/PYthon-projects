@@ -1,0 +1,25 @@
+"""
+This program generates passages that are generated in mad-lib format
+Author: Katherin 
+"""
+
+# The template for the story
+
+name = raw_input("Enter a name: ")
+one_adjective = raw_input("1st adjective: ")
+two_adjective = raw_input("2nd adjective: ")
+thr_adjective = raw_input("3rd adjective: ")
+verb = raw_input("Enter a verb: ")
+one_noun = raw_input("1st noun: ")
+two_noun = raw_input("2nd noun: ")
+animal = raw_input("Animal: ")
+food = raw_input("Food: ")
+fruit = raw_input("Fruit: ")
+superhero = raw_input("Superhero: ")
+country = raw_input("Country: ")
+dessert = raw_input("Dessert: ")
+year = raw_input("Year: ")
+
+STORY = "This morning %s woke up feeling lazy. 'It is going to be a %s day!' Outside, a %s of %s were protesting to keep %s in stores. They began to %s to the rhythm of the %s, which made all the %s very %s. Concerned, %s texted %s, who flew %s to %s and dropped %s in a puddle of frozen %s. %s woke up in the year %s, in a world where %s ruled the world." % (name, one_adjective, two_adjective, animal, food, verb, one_noun, fruit, thr_adjective, name, superhero, name, country, name, dessert, name, year, two_noun)
+
+print(STORY)

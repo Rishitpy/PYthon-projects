@@ -1,0 +1,26 @@
+number = int(input("Enter a two digit number : "))
+sq_sum: int
+sum_sq: int
+numb: int
+
+def diff(square_of_sum, sum_of_square):
+    difference = sq_sum - sum_sq
+    return difference
+
+
+def square_of_sum(number):
+    for nu in number:
+        numb = nu + nu
+    numbe = numb * numb
+
+
+def sum_of_square(number):
+    num = number * number
+    for nu in num:
+        numb = num + num
+    pass
+
+
+square_of_sum(number)
+sum_of_square(number)
+diff()

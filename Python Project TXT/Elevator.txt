@@ -1,0 +1,16 @@
+floors = input("^ for going up one floor, v for going down one floor.\n\t:")
+floored = floors.split()
+
+
+def up_do(x=0):
+    for x in range(len(floors)):
+        x += 1
+        for x in range(len(floors)):
+            if floored == "^":
+                x = x + 1
+            elif floored == "v":
+                x = x - 1
+        print(x)
+
+
+up_do()

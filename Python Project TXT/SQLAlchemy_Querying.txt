@@ -1,0 +1,10 @@
+from sqlalchemy import Table, MetaData
+from sqlalchemy import *
+
+metadata = MetaData()
+
+census = Table('census', metadata, autoload=True, autoload_with=engine)
+
+stmt = select([census])
+
+results = connection.execute(stmt).fetchall()

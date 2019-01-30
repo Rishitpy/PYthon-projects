@@ -1,0 +1,37 @@
+from PIL import Image
+from PIL import ImageFilter
+
+# Blur Image
+sister = Image.open("Bucky_Sister.jpg")
+blur = sister.filter(ImageFilter.BLUR)
+bucky = Image.open("Bucky.jpg")
+blur_b = bucky.filter(ImageFilter.BLUR)
+baby = Image.open("Baby.jpg")
+blur_ba = baby.filter(ImageFilter.BLUR)
+# Detailed Image
+sister1 = Image.open("Bucky_Sister.jpg")
+detail = sister1.filter(ImageFilter.DETAIL)
+bucky1 = Image.open("Bucky.jpg")
+detail_b = bucky1.filter(ImageFilter.DETAIL)
+baby1 = Image.open("Baby.jpg")
+detail_ba = baby1.filter(ImageFilter.DETAIL)
+# Edged Image
+sister2 = Image.open("Bucky_Sister.jpg")
+edge = sister.filter(ImageFilter.FIND_EDGES)
+bucky2 = Image.open("Bucky.jpg")
+edge_b = bucky.filter(ImageFilter.FIND_EDGES)
+baby2 = Image.open("Baby.jpg")
+edge_ba = baby.filter(ImageFilter.FIND_EDGES)
+
+# Blur Image
+blur.show()
+blur_b.show()
+blur_ba.show()
+# Detailed Image
+detail.show()
+detail_b.show()
+detail_ba.show()
+# Edged Image
+edge.show()
+edge_b.show()
+edge_ba.show()

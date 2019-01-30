@@ -1,0 +1,55 @@
+from tkinter import *
+
+
+def Create():
+    print("\nYou have to yourself create a new project in PyCharm !")
+
+
+def New():
+    print("\nGo To File -> Click on New... in PyCharm !")
+
+
+def Exit():
+    print("\nGo To File -> Click on Exit in PyCharm !")
+
+
+def Undo():
+    print("\nGo to Edit -> Click on Undo Typing in PyCharm !")
+
+
+def insert():
+    print("\nInsert a picture yourself in PhotoShop !")
+
+
+def Print():
+    print("\nPrint yourself in PyCharm !")
+
+
+root = Tk()
+
+menu = Menu(root)
+root.config(menu=menu)
+
+subMenu = Menu(menu)
+menu.add_cascade(label="File", menu=subMenu)
+subMenu.add_command(label="New project...", command=Create)
+subMenu.add_command(label="New...", command=New)
+subMenu.add_separator()
+subMenu.add_command(label="Exit", command=Exit)
+
+editMenu = Menu(menu)
+menu.add_cascade(label="Edit", menu=editMenu)
+editMenu.add_command(label="Undo Typing", command=Undo)
+
+# ********************* Toolbar ***************************
+
+toolbar = Frame(root, bg="black")
+
+insert_Pic = Button(toolbar, text="Insert Image", command=insert)
+insert_Pic.pack(side=LEFT, padx=2, pady=2)
+printsome = Button(toolbar, text="Print", command=Print)
+printsome.pack(side=LEFT, padx=2, pady=2)
+
+toolbar.pack(side=TOP, fill=X)
+
+root.mainloop()

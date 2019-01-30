@@ -1,0 +1,4 @@
+a, b = int(input("Enter the numbers"))
+d = a, b.split()
+c = 
+print(c)

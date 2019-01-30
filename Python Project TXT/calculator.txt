@@ -1,0 +1,50 @@
+def main():
+    type = input(
+        "Type M for Multiplication.\nS for Subtraction.\nA for Addition.\nD for Division.\nSq for squaring those numbers.\nEnter your choice : ").lower()
+    a = float(input("Enter first number : "))
+    b = float(input("Enter second number : "))
+
+
+    def addition():
+        c = a + b
+        print("Sum = {}".format(c))
+
+
+    def subtraction():
+        c = a - b
+        print("Difference = {}".format(c))
+
+
+    def multiplication():
+        c = a * b
+        print("Product = {}".format(c))
+
+
+    def division():
+        c = a / b
+        print("Quotient = {}".format(c))
+
+
+    def square():
+        c = a ** 2
+        print("Square = {}".format(c))
+
+
+    if type == "m":
+        multiplication()
+    elif type == "a":
+        addition()
+    elif type == "s":
+        subtraction()
+    elif type == "d":
+        division()
+    elif type == "sq":
+        square()
+
+    con = input("Type y for running again and n for exiting").lower()
+    if con == "y":
+        main()
+    elif con == "n":
+        exit()
+
+main()

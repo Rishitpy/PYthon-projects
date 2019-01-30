@@ -1,0 +1,3 @@
+x = input("Enter the details : ")
+y = x.split(",")
+print(y)

@@ -1,0 +1,8 @@
+from PIL import Image
+
+sister = Image.open("Bucky.jpg")
+baby = Image.open("Girl1.png")
+area = (100, 100, 500, 400)
+sister.paste(baby, area)
+
+sister.show()

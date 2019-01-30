@@ -1,0 +1,10 @@
+from PIL import Image
+
+baby = Image.open("Baby.jpg")
+black_white = baby.convert("L")
+print_baby = baby.convert("CMYK")
+original_baby = baby.convert("RGB")
+
+black_white.show()
+print_baby.show()
+original_baby.show()

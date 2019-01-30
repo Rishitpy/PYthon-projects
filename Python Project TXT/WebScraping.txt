@@ -1,0 +1,14 @@
+from bs4 import BeautifulSoup
+import requests
+
+source = requests.get('http://coreyms.com')
+
+soup = BeautifulSoup(source, 'lxml')
+
+article = soup.find('article')
+
+print(article.prettify())
+
+# headline = article.h2.a.text
+# print(headline)
+2 * 10 * 20 / 50

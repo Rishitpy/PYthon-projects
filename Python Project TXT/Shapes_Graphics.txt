@@ -1,0 +1,17 @@
+from tkinter import *
+
+root = Tk()
+
+canvas = Canvas(root, width=900, height=500)
+canvas.pack()
+
+blackLine = canvas.create_line(0, 0, 900, 250, fill="black")
+redLine = canvas.create_line(0, 500, 900, 250, fill="red")
+blueLine = canvas.create_line(900, 0, 0, 250, fill="blue")
+greenLine = canvas.create_line(900, 500, 0, 250, fill="green")
+pinkBox = canvas.create_rectangle(300, 180, 600, 320, fill="pink")
+
+canvas.delete(ALL)
+
+
+root.mainloop()

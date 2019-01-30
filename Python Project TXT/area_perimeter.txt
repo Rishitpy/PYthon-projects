@@ -1,0 +1,85 @@
+polygon = str(input("Enter the polygon's name (only in small letters) : "))         # input
+area: float           # variables
+base: float           # variables
+height: float         # variables
+half: float = 0.5     # variables
+perimeter: float      # variables
+pe_ar: str            # variables
+s1: float             # variables
+s2: float             # variables
+s3: float             # variables
+s4: float             # variables
+d1: float             # variables
+d2: float             # variables
+radius: float         # variables
+pi: float = 3.14      # variables
+circumference: float  # variables
+
+if polygon == "triangle":               # polygon condition for triangle
+    pe_ar = str(input("Type \"p for perimeter\" and \"a for area\""))               # input
+    if pe_ar == "p":                    # triangle condition for perimeter
+        s1 = float(input("Enter measurement of the first side : "))                 # input
+        s2 = float(input("Enter measurement of the second side : "))                # input
+        s3 = float(input("Enter measurement of the third side : "))                 # input
+        perimeter = s1 + s2 + s3                    # calculation
+        print("Perimeter =", perimeter)                                                             # print
+    if pe_ar == "a":                    # triangle condition for area
+        base = float(input("Enter the base : "))                                    # input
+        height = float(input("Enter the height : "))                                # input
+        area = half * base * height                 # calculation
+        print("Area =", area)                                                                   # print
+if polygon == "square":                 # polygon condition for square
+    pe_ar = str(input("Type \"p for perimeter\" and \"a for area\" : "))            # input
+    if pe_ar == "p":                    # square condition for perimeter
+        s1 = float(input("Enter the side for square : "))                           # input
+        perimeter = s1 * 4                          # calculation
+        print("Perimeter =", perimeter)                                                          # print
+    if pe_ar == "a":                    # square condition for area
+        s1 = float(input("Enter the side for square : "))                           # input
+        area = s1 * s1                              # calculation
+        print("Area =", area)                                                                    # print
+if polygon == "rectangle":             # polygon condition for rectangle
+    pe_ar = str(input("Type \"p for perimeter\" and \"a for area\" : "))            # input
+    if pe_ar == "p":                    # rectangle condition for perimeter
+        s1 = float(input("Enter the length for the rectangle : "))                  # input
+        s2 = float(input("Enter the breadth for the rectangle : "))                 # input
+        perimeter = 2 * (s1 + s2)                   # calculation
+        print("Perimeter =", perimeter)                                                          # print
+    if pe_ar == "a":                    # rectangle condition for area
+        s1 = float(input("Enter the length for the rectangle : "))                  # input
+        s2 = float(input("Enter the breadth for the rectangle : "))                 # input
+        area = s1 * s2                              # calculation
+        print("Area =", area)                                                                    # print
+if polygon == "rhombus":                # polygon condition for rhombus
+    pe_ar = str(input("Type \"p for perimeter\" and \"a for area\" : "))            # input
+    if pe_ar == "p":                    # rhombus condition for perimeter
+        s1 = float(input("Enter the side for rhombus : "))                          # input
+        perimeter = s1 * 4                          # calculation
+        print("Perimeter =", perimeter)                                                         # print
+    if pe_ar == "a":                    # rhombus condition for area
+        d1 = float(input("Enter measurement of diagonal 1 : "))                     # input
+        d2 = float(input("Enter measurement of diagonal 2 : "))                     # input
+        area = d1 * d2 / 2                          # calculation
+        print(area)                                                                             # print
+if polygon == "parallelogram":          # polygon condition for parallelogram
+    pe_ar = str(input("Type \"p for perimeter\" and \"a for area\" : "))            # input
+    if pe_ar == "p":                    # parallelogram condition for perimeter
+        base = float(input("Enter the base of parallelogram : "))                   # input
+        height = float(input("Enter the height of parallelogram : "))               # input
+        perimeter = 2 * (base + height)             # calculation
+        print("Perimeter =", perimeter)                                                         # print
+    if pe_ar == "a":                    # parallelogram condition for area
+        base = float(input("Enter the base of parallelogram"))                      # input
+        height = float(input("Enter the height of parallelogram"))                  # input
+        area = base * height                        # calculation
+        print(area)                                                                             # print
+if polygon == "circle":
+    pe_ar = str(input("Type \"c for circumference\" and \"a for area\" : "))        # input
+    if pe_ar == "c":                    # circle condition for circumference
+        radius = float(input("Enter the radius of the circle : "))                  # input
+        circumference = pi * 2 * radius             # calculation
+        print("Circumference =", circumference)                                                 # print
+    if pe_ar == "a":                    # circle condition for area
+        radius = float(input("Enter the radius of the circle : "))                  # input
+        area = pi * radius * radius                 # calculation
+        print(area)                                                                             # print

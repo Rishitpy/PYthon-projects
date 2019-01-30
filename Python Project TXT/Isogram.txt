@@ -1,0 +1,9 @@
+string = str(input("Enter a word : "))
+
+each = string.split()
+
+for n in string:
+    if len(n) > 1:
+        print("It is a phrase.")
+    else:
+        print("It is an isogram.")

@@ -1,0 +1,18 @@
+x = 9
+a = 0
+b: int
+d: int
+c: int
+f: int
+g: int
+
+
+while a <= 90:
+    a += 1
+    b = a + x
+    c: int = b % 10
+    f: int = b - c
+    d: int = c % 2
+    g: int = f % 2
+    if d == 0 and g == 0:
+        print(b)

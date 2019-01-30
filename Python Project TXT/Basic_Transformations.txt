@@ -1,0 +1,17 @@
+from PIL import Image
+
+baby = Image.open("Baby.jpg")
+square_baby = baby.resize((500, 500))
+flip_baby = baby.transpose(Image.FLIP_LEFT_RIGHT)
+rotate_baby = baby.transpose(Image.FLIP_TOP_BOTTOM)
+hund_baby = baby.transpose(Image.ROTATE_90)
+eigh_baby = baby.transpose(Image.ROTATE_180)
+seve_baby = baby.transpose(Image.ROTATE_270)
+
+baby.show()
+square_baby.show()
+flip_baby.show()
+rotate_baby.show()
+hund_baby.show()
+eigh_baby.show()
+seve_baby.show()

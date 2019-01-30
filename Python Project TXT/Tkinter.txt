@@ -1,0 +1,6 @@
+﻿from tkinter import *
+
+root = Tk()
+the_label = Label(root, text="Are you an aspiring data scientist with doctoral ambitions? Mayur Datar, Flipkart's chief data scientist, has a nuanced take on the Academia vs Industry debate. “You need data to power data science and all that data lies in (corporate) organisations…but if your aptitude is in research, do a Ph.D.,” Datar tells Nirajita Banerjee. The ideal scenario — work at a data-intensive firm for a few years and then plunge into research.")
+the_label.pack()
+root.mainloop()

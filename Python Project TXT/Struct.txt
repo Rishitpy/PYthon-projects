@@ -1,0 +1,16 @@
+from struct import *
+
+# Store as bytes data
+packed_data = pack('iif', 25, 4554, 5654.234)
+print(packed_data)
+
+print("CalcSize of 1st integer : " + str(calcsize('i')))
+print("CalcSize of 2nd integer : " + str(calcsize('i')))
+print("CalcSize of 1st float value : " + str(calcsize('f')))
+print("CalcSize of all the values : " + str(calcsize('iif')))
+
+# To get bytes data back to normal .  (b'\x19\x00\x00\x00\xca\x11\x00\x00\xdf\xb1\xb0E')
+original_data = unpack('iif', packed_data)
+print("Unpacked data : " + str(original_data))
+
+print("2nd Unpack data : " + str(unpack('iif', b'\x19\x00\x00\x00\xca\x11\x00\x00\xdf\xb1\xb0E')))

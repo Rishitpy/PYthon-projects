@@ -1,0 +1,20 @@
+from typing import Type
+
+x = 1999
+z = 7
+b: int = 0
+
+
+while b <= 1500:
+    b += 1
+    c = x + b
+
+    # noinspection PyTypeChecker
+    y: int = c % z
+
+    if y == 0:
+        if c % 5 != 0:
+            print(c)
+
+    elif y != 0:
+        continue

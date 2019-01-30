@@ -1,0 +1,24 @@
+from tkinter import *
+from tkinter import ttk
+
+root = Tk()
+button = ttk.Button(root, text="Click Me !")    # Make a button
+button.pack()
+
+
+def callBack():
+    print("Clicked !")
+
+
+button.state(['disabled'])  # To disable a button
+button.instate(['disabled'])    # Check whether button is disabled or not
+button.state(['!disabled'])     # disabled opposite
+
+button.config(command=callBack)     # To give command to button
+
+logo = PhotoImage(file="Messi.jpg")
+button.config(image=logo, compound=LEFT)
+small_logo = logo.subsample(5, 5)
+button.config(image=small_logo)
+
+root.mainloop()

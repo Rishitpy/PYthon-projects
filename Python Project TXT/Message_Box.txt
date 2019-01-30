@@ -1,0 +1,28 @@
+from tkinter import *
+import tkinter.messagebox
+
+root = Tk()
+
+tkinter.messagebox.showinfo("Window Title", "Blazing Speed is faster than anything but scientists are discovering on it !")
+answer = tkinter.messagebox.askquestion("Question 1", "Do you like a pizza ?")
+
+if answer == 'yes':
+    print("Go and take your own pizza !")
+else:
+    print("Then what can I do !")
+
+answer1 = tkinter.messagebox.askquestion("Question 2", "Do you see english movies ?")
+
+if answer1 == 'yes':
+    print("Wow ! i also see english movies !")
+else:
+    print("Then you should see; English movies are good !")
+
+answer2 = tkinter.messagebox.askquestion("Question 3", "Do you want to become a software engineer ?")
+
+if answer2 == 'yes':
+    print("Then I suggest you to study to go to Google !")
+else:
+    print("Then you should study engineering as the future is of engineers")
+
+root.mainloop()

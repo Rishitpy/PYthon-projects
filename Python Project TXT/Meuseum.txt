@@ -1,0 +1,6 @@
+def sorted(list):
+    sort_list = list.sort()
+    print(sort_list)
+
+
+sorted([1, 2, 5, 3, 9, 6])

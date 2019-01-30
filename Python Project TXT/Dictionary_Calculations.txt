@@ -1,0 +1,11 @@
+stocks = {
+    'GOOG': 434,
+    'AAPL': 325,
+    'FACB': 54,
+    'AMZN': 623,
+    'FORD': 32,
+    'MSFT': 549,
+}
+
+min_price = min(zip(stocks.values(), stocks.keys()))
+print(min_price)

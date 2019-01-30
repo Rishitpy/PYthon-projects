@@ -1,0 +1,17 @@
+# import numpy as np
+
+# filename = 'anything.txt'
+
+# data = np.loadtxt(filename, delimiter=',')
+
+# see (Python Tutorial: Learn Python For Data Science
+# DataCamp
+# 29 / 40)
+
+
+import numpy as np
+
+filename = 'anything.txt'
+
+data = np.loadtxt(filename, delimiter=',', skiprows=1)
+print(data)

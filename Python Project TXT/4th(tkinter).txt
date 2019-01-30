@@ -1,0 +1,22 @@
+from tkinter import *
+from tkinter import ttk
+
+root = Tk()
+
+entry = ttk.Entry(root)
+entry.pack()
+
+entry.bind('<<Copy>>', lambda e: print('Copy'))     # Can Execute copy function and print     Copy
+entry.bind('<<Paste>>', lambda e: print('Paste'))   # Can Execute paste function and print    Paste
+
+entry.event_add('<<OddNumber>>', '1', '3', '5', '7', '9')   # Type odd numbers given and it will print        Odd Number
+entry.bind('<<OddNumber>>', lambda e: print('Odd Number !'))    # Complete OddNumber entry
+
+print(entry.event_info('<<OddNumber>>'))    # Print what can be done to execute it
+
+entry.event_generate('<<OddNumber>>')   # Executes itself
+entry.event_generate('<<Paste>>')       # Executes itself
+
+entry.event_delete('<<OddNumber>>')     # Delete the entry OddNumber
+
+root.mainloop()

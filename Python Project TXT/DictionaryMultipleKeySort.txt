@@ -1,0 +1,21 @@
+from operator import itemgetter
+
+users = [
+    {'fname': 'Rishit', 'lname': 'Girdhar'},
+    {'fname': 'Harshit', 'lname': 'Mangla'},
+    {'fname': 'Sidhant', 'lname': 'Sharma'},
+    {'fname': 'Aayush', 'lname': 'Kataria'},
+    {'fname': 'Rajat', 'lname': 'Kundu'},
+    {'fname': 'Mayank', 'lname': 'Bajaj'},
+    {'fname': 'Harsh', 'lname': 'Soni'},
+    {'fname': 'Bucky', 'lname': 'Roberts'},
+    {'fname': 'Jinisha', 'lname': 'Girdhar'},
+    {'fname': 'Ojaswee', 'lname': 'Girdhar'},
+]
+
+for x in sorted(users, key=itemgetter('lname')):
+    print(x)
+
+print("-------------------------------------------------------------------------------------------------------------")
+for x in sorted(users, key=itemgetter('fname', 'lname')):
+    print(x)

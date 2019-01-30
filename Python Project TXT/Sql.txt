@@ -1,0 +1,12 @@
+from sqlalchemy import create_engine
+
+engine = create_engine('sqlite:///census_nyc.sqlite')
+
+connection = engine.connect()
+
+stmt = 'SELECT * FROM people'
+
+result_proxy = connection.execute(stmt)
+
+results = result_proxy.fetchall()
+

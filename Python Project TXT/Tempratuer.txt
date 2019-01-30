@@ -1,0 +1,17 @@
+inpu = str(input("Enter the input of the temperature scale (in small letters) \"f\" for fahrenheit and \"c\" for celsius : "))
+b: float = 1.8
+c: int = 32
+y: float
+k: float = 0.5
+
+
+if inpu == "c":
+    x = float(input("Enter the value to convert into fahrenheit : "))
+    y = x * b + c
+    print(y, "degree fahrenheit")
+elif inpu == "f":
+    x = float(input("Enter the value to convert into celsius"))
+    y = (x - 32) * k
+    print(y, "degree celsius")
+else:
+    print("Run again !")
