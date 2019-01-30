@@ -1,0 +1,4 @@
+p = input("Enter your email to contribute us something : ")
+
+with open("Contributors.txt", "a") as emails:
+    emails.write(p + "\n")

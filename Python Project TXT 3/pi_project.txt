@@ -1,0 +1,12 @@
+with open("million_pi.txt") as pi:
+    lines = pi.readlines()
+
+pi_string = ""
+for line in lines:
+    pi_string += line.rstrip()
+
+birthday = input("Enter your birthdate in ddmmyy form : ")
+if birthday in pi_string:
+    print("Your birthday comes in first 1 million digits of pi")
+else:
+    print("Your birthday do note come in first 1 million digits of pi")

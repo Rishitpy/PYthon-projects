@@ -1,0 +1,19 @@
+import pygame, sys
+import pygame.locals
+
+pygame.init()
+BLACK = (0, 0, 0)
+WIDTH = 1280
+HEIGHT = 1024
+windowSurface = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
+
+windowSurface.fill(BLACK)
+
+while True:
+    for something in pygame.event.get():
+        if something == pygame.K_p:
+            # Do what you want to here
+            pass
+        if something.type == pygame.locals.QUIT:
+            pygame.quit()
+            sys.exit()

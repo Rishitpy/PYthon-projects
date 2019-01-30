@@ -1,0 +1,30 @@
+import keyboard
+
+print("You are in a room with four doors in each direction of yours.\n1st door has a fire which can burn you.\n2nd "
+      "door has a vampire which will suck your blood and kill you.\n3rd door has a pool of Crocodiles.\n4thBack door "
+      "has Lions and wolf, both hungry from 2 days.")
+
+
+def Main():
+    print("Tap 1 key to go to first room, 2 for second, and so on.")
+
+    while True:
+        try:
+            if keyboard.is_pressed('1'):
+                print("You are wrong")
+            elif keyboard.is_pressed('2'):
+                print("You are wrong.")
+            elif keyboard.is_pressed('3'):
+                print("You are wrong.")
+            elif keyboard.is_pressed('4'):
+                print("You are correct as the both cannot live together if they are hungry. The would kill each other.")
+        except:
+            pass
+    p = input("Do you want to continue (y/n)").lower()
+    if p == "y":
+        Main()
+    elif p == "n":
+        exit()
+
+
+Main()

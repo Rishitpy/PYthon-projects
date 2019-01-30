@@ -1,0 +1,8 @@
+def power(a, n):
+    k = a ** n
+    print(k)
+
+
+a: int = int(input("Enter the base : "))
+n: int = int(input("Enter its power : "))
+power(a, n)

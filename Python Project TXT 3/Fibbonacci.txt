@@ -1,0 +1,6 @@
+def F(a, b):
+    a, b = 0, 1
+    while True:
+        return a
+        a, b = b, a + b
+F(0, 1)

@@ -1,0 +1,4 @@
+import string
+x = str(input("Enter a string : "))\
+ord(x)
+print(x)

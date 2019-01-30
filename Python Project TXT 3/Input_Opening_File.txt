@@ -1,0 +1,16 @@
+file = str(input("Enter the path or name of the file : "))
+mode = str(input("Type R for Reading.\nW for Making and Writing to file.\nA for Adding Something to that file.\nEnter "
+                 "your choice : ")).lower
+
+if mode == "r":
+    with open(str(file), "r") as opened:
+        text = opened.read()
+        print(text)
+elif mode == "w":
+    with open(str(file), "w") as opened:
+        text = str(input("Enter the text you want to write to the file : "))
+        opened.write(text)
+elif mode == "a":
+    with open(str(file), "a") as opened:
+        text = str(input("Enter the text you want to add to the file : "))
+        opened.write(text)
